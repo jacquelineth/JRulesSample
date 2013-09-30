@@ -1,0 +1,23 @@
+# Vocabulary Properties
+uuid = c1f8f7ce-5748-4e96-91f2-b4d65f5cb8b1
+
+# java.lang.Enum
+java.lang.Enum#concept.label = enum
+java.lang.Enum.compareTo(java.lang.Enum)#phrase.navigation = {this}.compareTo({0})
+java.lang.Enum.declaringClass#phrase.navigation = {declaring class} of {this}
+java.lang.Enum.equals(java.lang.Object)#phrase.navigation = {this}.equals({0})
+
+# java.util.EnumSet
+java.util.EnumSet#concept.label = enum set
+java.util.EnumSet.allOf(java.lang.Class)#phrase.navigation = enum set.allOf({0})
+java.util.EnumSet.clone()#phrase.navigation = {this}.clone()
+java.util.EnumSet.complementOf(java.util.EnumSet)#phrase.navigation = enum set.complementOf({0})
+java.util.EnumSet.copyOf(java.util.EnumSet)#phrase.navigation = enum set.copyOf({0})
+java.util.EnumSet.noneOf(java.lang.Class)#phrase.navigation = enum set.noneOf({0})
+java.util.EnumSet.of(java.lang.Enum)#phrase.navigation = enum set.of({0})
+java.util.EnumSet.of(java.lang.Enum,java.lang.Enum)#phrase.navigation = enum set.of({0}, {1})
+java.util.EnumSet.of(java.lang.Enum,java.lang.Enum,java.lang.Enum)#phrase.navigation = enum set.of({0}, {1}, {2})
+java.util.EnumSet.of(java.lang.Enum,java.lang.Enum,java.lang.Enum,java.lang.Enum)#phrase.navigation = enum set.of({0}, {1}, {2}, {3})
+java.util.EnumSet.of(java.lang.Enum,java.lang.Enum,java.lang.Enum,java.lang.Enum,java.lang.Enum)#phrase.navigation = enum set.of({0}, {1}, {2}, {3}, {4})
+java.util.EnumSet.of(java.lang.Enum,java.lang.Enum[])#phrase.navigation = enum set.of({0}, {1})
+java.util.EnumSet.range(java.lang.Enum,java.lang.Enum)#phrase.navigation = enum set.range({0}, {1})

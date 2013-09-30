@@ -1,0 +1,64 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>88cff440-6138-43ad-9610-5372de9cc2bd</id>
+    <class>
+        <businessName>com.ibm.support.PMR.Portfolio</businessName>
+        <import>com.ibm.support.PMR.*</import>
+        <import>com.ibm.support.PMR.Portfolio</import>
+        <method>
+            <name>addSingleCustomer</name>
+            <parameter type="com.ibm.support.PMR.Customer"/>
+            <body language="irl"><![CDATA[
+            this.customersList.add(c);
+context.retract(c);
+            ]]></body>
+        </method>
+        <method>
+            <name>checkListed</name>
+            <parameter type="com.ibm.support.PMR.Customer"/>
+            <body language="irl"><![CDATA[
+            Portfolio p=(Portfolio)context.getParameterValue("myMainportfolio");
+Store s=(Store)context.getParameterValue("Store");
+Portfolio p2=(Portfolio)context.getParameterValue("mySecondaryportfolio");
+System.err.print("\n\t Called virtual methods"+p+p2+"\n"+s);
+return p.customersList.contains(customer) || p2.customersList.contains(customer);
+            ]]></body>
+        </method>
+        <method>
+            <name>removeSingleCustomer</name>
+            <parameter type="com.ibm.support.PMR.Customer"/>
+            <body language="irl"><![CDATA[
+            this.customersList.remove(c);
+context.insert(c);
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.ibm.support.PMR.Store</businessName>
+        <attribute>
+            <name>computedInteger</name>
+            <getter language="irl"><![CDATA[
+            return new Integer(this.computedValue);
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.support.PMR.Tax</businessName>
+        <executionName>java.lang.Object</executionName>
+        <method>
+            <name>computeEuroVAT</name>
+            <parameter type="java.lang.Double"/>
+            <body language="irl"><![CDATA[
+            return Value*1.18d;
+            ]]></body>
+        </method>
+        <method>
+            <name>computeLocalTAX</name>
+            <parameter type="double"/>
+            <body language="irl"><![CDATA[
+            return paid*1.10d;
+            ]]></body>
+        </method>
+    </class>
+</b2x:translation>
