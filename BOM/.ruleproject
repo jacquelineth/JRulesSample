@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore">
+  <name>BOM</name>
+  <uuid>bf78e194-0141-4198-b202-1c11010a4e9e</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <categories>Rich</categories>
+  <categories>Poor</categories>
+  <categories>MiddeClass</categories>
+  <categories>WorkingClass</categories>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="ClassicXOM" url="platform:/ClassicXOM" kind="JAVA_PROJECT"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="modeljava" url="platform:/BOM/bom/modeljava.bom" origin="xom:/BOM/org.eclipse.jdt.launching.JRE_CONTAINER"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="ClassicXOM" url="platform:/BOM/bom/ClassicXOM.bom" origin="xom:/BOM//ClassicXOM"/>
+  </paths>
+  <parameters name="Store" type="com.ibm.support.PMR.Store" initialValue="new com.ibm.support.PMR.Store()" verbalization="outputStore" direction="OUT"/>
+  <parameters name="myMainportfolio" type="com.ibm.support.PMR.Portfolio" initialValue="new com.ibm.support.PMR.Portfolio()" verbalization="Principal" direction="IN_OUT"/>
+  <parameters name="mySecondaryportfolio" type="com.ibm.support.PMR.Portfolio" initialValue="new com.ibm.support.PMR.Portfolio()" verbalization="Secondary" direction="IN_OUT"/>
+  <parameters name="counter" type="short" initialValue="50" verbalization="Customercounter"/>
+  <parameters name="Exectime" type="long" initialValue="0" verbalization="Execution time" direction="OUT"/>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+</ilog.rules.studio.model.base:RuleProject>

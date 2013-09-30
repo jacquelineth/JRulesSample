@@ -1,0 +1,40 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/BOM/org.eclipse.jdt.launching.JRE_CONTAINER"
+property uuid "27122dc4-a5f8-41bb-89e9-e4287bacf2eb"
+package java.lang;
+
+
+public abstract class Enum
+        extends java.lang.Comparable, java.io.Serializable
+{
+    public readonly java.lang.Class declaringClass;
+    public final int compareTo(java.lang.Enum arg);
+    public final boolean equals(object arg);
+    public final int hashCode();
+    public final string name();
+    public final int ordinal();
+    public string toString();
+    public static java.lang.Enum valueOf(java.lang.Class arg1, string arg2);
+}
+
+package java.util;
+
+
+public abstract class EnumSet
+        extends java.util.AbstractSet, java.lang.Cloneable, java.io.Serializable
+{
+    public static java.util.EnumSet allOf(java.lang.Class arg) domain 0,*;
+    public java.util.EnumSet clone() domain 0,*;
+    public static java.util.EnumSet complementOf(java.util.EnumSet arg domain 0,*) domain 0,*;
+    public static java.util.EnumSet copyOf(java.util.EnumSet arg domain 0,*) domain 0,*;
+    public static java.util.EnumSet noneOf(java.lang.Class arg) domain 0,*;
+    public static java.util.EnumSet of(java.lang.Enum arg) domain 0,*;
+    public static java.util.EnumSet of(java.lang.Enum arg1, java.lang.Enum arg2) domain 0,*;
+    public static java.util.EnumSet of(java.lang.Enum arg1, java.lang.Enum[] arg2) domain 0,*;
+    public static java.util.EnumSet of(java.lang.Enum arg1, java.lang.Enum arg2, java.lang.Enum arg3) domain 0,*;
+    public static java.util.EnumSet of(java.lang.Enum arg1, java.lang.Enum arg2, java.lang.Enum arg3, java.lang.Enum arg4) domain 0,*;
+    public static java.util.EnumSet of(java.lang.Enum arg1, java.lang.Enum arg2, java.lang.Enum arg3, java.lang.Enum arg4, java.lang.Enum arg5) domain 0,*;
+    public static java.util.EnumSet range(java.lang.Enum arg1, java.lang.Enum arg2) domain 0,*;
+}
+

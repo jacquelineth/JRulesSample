@@ -1,0 +1,14 @@
+package taxes {
+   rule EuroTax {
+      property ilog.rules.business_name = "EuroTax";
+      property ilog.rules.package_name = "taxes";
+      property status = "new";
+      when {
+         variable1: com.ibm.support.PMR.Store();
+      } then {
+         variable1.legalStockValue = java.lang.Integer.valueOf(com.ibm.support.PMR.Tax.computeEuroVAT(java.lang.Double.valueOf(variable1.computedInteger.doubleValue())).intValue());
+         ilog.rules.brl.System.printMessage(("Applied EU taxes: " + com.ibm.support.PMR.Tax.computeEuroVAT(java.lang.Double.valueOf(variable1.computedInteger.doubleValue())).doubleValue()));
+      }
+   }
+}
+

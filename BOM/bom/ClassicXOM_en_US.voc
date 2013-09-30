@@ -1,0 +1,64 @@
+# Vocabulary Properties
+uuid = 9eeb5f97-07b0-47ca-b216-575c2b5b34a4
+
+# com.ibm.support.PMR.Category
+com.ibm.support.PMR.Category#concept.label = category
+com.ibm.support.PMR.Category.Business#instance.label = Business
+com.ibm.support.PMR.Category.Distinguished#instance.label = Distinguished
+com.ibm.support.PMR.Category.Exclusive#instance.label = Exclusive
+com.ibm.support.PMR.Category.Express#instance.label = Express
+com.ibm.support.PMR.Category.Gold#instance.label = Gold
+com.ibm.support.PMR.Category.Platinum#instance.label = Platinum
+com.ibm.support.PMR.Category.Silver#instance.label = Silver
+
+# com.ibm.support.PMR.Customer
+com.ibm.support.PMR.Customer#concept.label = customer
+com.ibm.support.PMR.Customer.CumulatedPurchase#phrase.action = set the cumulated purchase of {this} to {cumulated purchase}
+com.ibm.support.PMR.Customer.CumulatedPurchase#phrase.navigation = {cumulated purchase} of {this}
+com.ibm.support.PMR.Customer.category#phrase.action = set the category of {this} to {category}
+com.ibm.support.PMR.Customer.category#phrase.navigation = {category} of {this}
+com.ibm.support.PMR.Customer.name#phrase.action = set the name of {this} to {name}
+com.ibm.support.PMR.Customer.name#phrase.navigation = {name} of {this}
+
+# com.ibm.support.PMR.Portfolio
+com.ibm.support.PMR.Portfolio#concept.label = portfolio
+com.ibm.support.PMR.Portfolio.addSingleCustomer(com.ibm.support.PMR.Customer)#phrase.action = add {0} to the customers list  of {this}
+com.ibm.support.PMR.Portfolio.checkListed(com.ibm.support.PMR.Customer)#phrase.navigation = {0}  is enlisted in {this}
+com.ibm.support.PMR.Portfolio.containsCategory(com.ibm.support.PMR.Category)#phrase.navigation = {0} is a category of {this}
+com.ibm.support.PMR.Portfolio.customersList#phrase.action = set the customers of {this} to {customer}
+com.ibm.support.PMR.Portfolio.customersList#phrase.navigation = {customer} of {this}
+com.ibm.support.PMR.Portfolio.removeSingleCustomer(com.ibm.support.PMR.Customer)#phrase.action = remove {0} from the customers list  of {this}
+com.ibm.support.PMR.Portfolio.reverseCategory()#phrase.action = reverseCategory {this}
+
+# com.ibm.support.PMR.Product
+com.ibm.support.PMR.Product#concept.label = product
+com.ibm.support.PMR.Product.Bread#instance.label = Bread
+com.ibm.support.PMR.Product.Burger#instance.label = Burger
+com.ibm.support.PMR.Product.CD#instance.label = CD
+com.ibm.support.PMR.Product.Cola#instance.label = Cola
+com.ibm.support.PMR.Product.DVD#instance.label = DVD
+com.ibm.support.PMR.Product.Game#instance.label = Game
+com.ibm.support.PMR.Product.Laptop#instance.label = Laptop
+com.ibm.support.PMR.Product.LavaLamp#instance.label = LavaLamp
+com.ibm.support.PMR.Product.Monitor#instance.label = Monitor
+com.ibm.support.PMR.Product.Mouse#instance.label = Mouse
+com.ibm.support.PMR.Product.Phone#instance.label = Phone
+com.ibm.support.PMR.Product.USBkey#instance.label = USBkey
+com.ibm.support.PMR.Product.cheapestProduct()#phrase.navigation = cheapest Product
+com.ibm.support.PMR.Product.getAffordableProduct(int)#phrase.navigation = affordable product for {0}
+com.ibm.support.PMR.Product.price#phrase.navigation = {price} of {this}
+com.ibm.support.PMR.Product.toString()#phrase.navigation = {this} as a string
+
+# com.ibm.support.PMR.Store
+com.ibm.support.PMR.Store#concept.label = store
+com.ibm.support.PMR.Store.addSale(com.ibm.support.PMR.Product)#phrase.action = add {0} to the sales of {this}
+com.ibm.support.PMR.Store.computedInteger#phrase.navigation = {computed integer} of {this}
+com.ibm.support.PMR.Store.computedValue#phrase.action = set the computed value of {this} to {computed value}
+com.ibm.support.PMR.Store.computedValue#phrase.navigation = {computed value} of {this}
+com.ibm.support.PMR.Store.legalStockValue#phrase.action = set the legal stock value of {this} to {legal stock value}
+com.ibm.support.PMR.Store.legalStockValue#phrase.navigation = {legal stock value} of {this}
+
+# com.ibm.support.PMR.Tax
+com.ibm.support.PMR.Tax#concept.label = TAX
+com.ibm.support.PMR.Tax.computeEuroVAT(java.lang.Double)#phrase.navigation = EuroVAT of {0}
+com.ibm.support.PMR.Tax.computeLocalTAX(double)#phrase.navigation = with LocalTAX on {0}
