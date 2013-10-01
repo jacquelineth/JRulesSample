@@ -1,7 +1,11 @@
 package com.ibm.support.PMR;
 
 import java.util.EnumSet;
-
+/**
+ * Not Serialized since no state
+ * @author thierry
+ *
+ */
 public enum Product {
 	Cola(1),Bread(2),Burger(5),CD(10),DVD(20),USBkey(25),Mouse(50),Game(75),LavaLamp(100),Laptop(300),Monitor(400),Phone(500);
 	 private int price;

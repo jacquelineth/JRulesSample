@@ -1,5 +1,9 @@
 package com.ibm.support.PMR;
-
+/**
+ * Not Serialized since no state
+ * @author thierry
+ *
+ */
 public enum Category {
 	Centurion,Platinum, Gold, Silver, Exclusive, Business, Express, Distinguished;
 	@Override public String toString() {
