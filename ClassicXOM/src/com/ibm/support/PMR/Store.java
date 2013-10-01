@@ -1,8 +1,14 @@
 package com.ibm.support.PMR;
 
+import java.io.Serializable;
 
 
-public class Store {
+
+public class Store implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7263780442769770595L;
 	java.util.EnumMap<Product,Integer> account;
 	public Store(){
 		account=new java.util.EnumMap<Product,Integer>(Product.class);

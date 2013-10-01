@@ -1,10 +1,15 @@
 package com.ibm.support.PMR;
 
+import java.io.Serializable;
 import java.util.EnumSet;
 import java.util.Vector;
 
-public class Portfolio {
-	 public java.util.Vector<Customer> customersList; //domain 0,* class org.example.portfolioschema.Customer;
+public class Portfolio implements Serializable {
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8635316652052168668L;
+	public java.util.Vector<Customer> customersList; //domain 0,* class org.example.portfolioschema.Customer;
 	 public Portfolio(){
 		 customersList=new Vector<Customer>();
 		 
@@ -13,7 +18,7 @@ public class Portfolio {
 	 public void reverseCategory (){
 		 categories=EnumSet.complementOf(categories);
 	 }
-	 public java.util.EnumSet<Category> categories;
+	 public transient java.util.EnumSet<Category> categories;
 	 public boolean containsCategory(Category c){
 		 return categories.contains(c);
 	 }
