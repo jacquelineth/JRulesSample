@@ -18,8 +18,12 @@ public class Portfolio implements Serializable {
 	 public void reverseCategory (){
 		 categories=EnumSet.complementOf(categories);
 	 }
-	 public transient java.util.EnumSet<Category> categories;
-	 public boolean containsCategory(Category c){
+	 
+	  transient java.util.EnumSet<Category> categories;
+	 public java.util.EnumSet<Category> getCategories() {
+		return categories;
+	}
+	public boolean containsCategory(Category c){
 		 return categories.contains(c);
 	 }
 	 @Override
