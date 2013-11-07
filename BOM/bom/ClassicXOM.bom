@@ -34,7 +34,7 @@ public class Customer
 
 public class Portfolio
 {
-    public java.util.EnumSet categories domain 0,* class com.ibm.support.PMR.Category;
+    public readonly java.util.EnumSet categories domain 0,* class com.ibm.support.PMR.Category;
     public java.util.Vector customersList domain 0,* class com.ibm.support.PMR.Customer;
     public Portfolio();
     public void addSingleCustomer(com.ibm.support.PMR.Customer c);
