@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleapp-archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schemas.ilog.com/JRules/1.2/RuleAppArchive">
+  <ruleapp>
+    <ruleapp-display-name>RuleApp</ruleapp-display-name>
+    <ruleapp-name>RuleApp</ruleapp-name>
+    <ruleapp-version>1.0</ruleapp-version>
+    <creation-date>1389928534570</creation-date>
+    <ruleset>
+      <ruleset-display-name>Rules</ruleset-display-name>
+      <ruleset-name>Rules</ruleset-name>
+      <ruleset-version>1.0</ruleset-version>
+      <creation-date>1389928534820</creation-date>
+    </ruleset>
+  </ruleapp>
+</ruleapp-archive>

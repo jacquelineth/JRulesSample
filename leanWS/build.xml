@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="leanWS"  default="create-war" basedir=".">
+    <property file="build.properties"/>
+	
+	<import file="${executionserver.home}/lib/classpath-executionserver.xml"/>
+    <taskdef resource="res-tasks.properties" >
+       <classpath refid="executionserver.tools.classpath"/>
+    </taskdef>
+    <taskdef resource="res-tasks.properties" >
+	  <classpath refid="executionserver.setup.classpath" />
+    </taskdef>
+
+	<patternset id="jaxws.jar.files">
+		<include name="activation.jar" />
+		<include name="FastInfoset.jar" />
+		<include name="jaxb-api.jar" />
+		<include name="jaxb-impl.jar" />
+		<include name="jaxb-xjc.jar" />
+		<include name="jaxws-api.jar" />
+		<include name="jaxws-rt.jar" />
+		<include name="jaxws-tools.jar" />
+		<include name="jsr173_api.jar" />
+		<include name="jsr181-api.jar" />
+		<include name="saaj-api.jar" />
+		<include name="saaj-impl.jar" />
+		<include name="sjsxp.jar" />
+		<include name="http.jar" />
+		<include name="jsr250-api.jar" />
+		<include name="resolver.jar" />
+		<include name="stax-ex.jar" />
+		<include name="streambuffer.jar" />
+	</patternset>
+
+	<path id="jaxws.classpath">
+	    <pathelement location="${java.home}/../lib/tools.jar"/>
+	    <fileset dir="${executionserver.home}/lib/jaxws" >
+		    <patternset refid="jaxws.jar.files" />
+	    </fileset>
+	</path>
+
+
+	<target name="usage" description="display the usage" >
+	<echo> 
+	Main targets:
+		build-server-java  generate the web service
+		clean              delete the build/ directory
+ 		create-war         create the war file which contains the web service
+ 		deploy.ruleapp     deploy the RuleApp archive
+ 		deploy.war         deploy the web service in the CATALINA_HOME directory
+ 		generate.ra.xml    regenerate the ra.xml file used by the XU
+ 		undeploy.ruleapp   undeploy the RuleApp archive
+ 		undeploy.war       undeploy the web service in the CATALINA_HOME directory
+ 		usage              display the usage
+	Default target: create-war	
+	</echo>
+	</target>
+
+	<target name="clean" description="delete the build/ directory">	  
+	  <delete includeemptydirs="true" failonerror="false">
+	    <fileset dir="${build.classes}" includes="**/*"/>
+	  </delete>
+	  <delete includeemptydirs="true" failonerror="false">
+	    <fileset dir="${build.src}" includes="**/*" />
+	  </delete>	
+	  <delete includeemptydirs="true" failonerror="false">
+	    <fileset dir="${build.war}" includes="**/*" />
+	  </delete>	
+	</target>
+	
+	<target name="get.tools.jar" description="Verify that the tools.jar file is present" > 
+		<condition property="isToolsJarFile" >
+			<available file="${java.home}/../lib/tools.jar" />
+		</condition>
+	</target>
+
+	<target name="verify.jdk" depends="get.tools.jar"
+			description="Verify that the environment is correct to execute the targets" >
+		<fail unless="isToolsJarFile" message="${java.home}/../lib/tools.jar is not found. Please verify your JDK installation." />
+	</target>
+	
+	<target name="generate.wsdl" depends="build-server-java" >
+    	<taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
+        	<classpath refid="jaxws.classpath"/>
+        </taskdef>
+        <property name="wsdl.dir" value="${basedir}/wsdl/" />
+        <delete dir="${wsdl.dir}" />
+        <mkdir dir="${wsdl.dir}" />
+        <wsgen sei="RuleApp.LeanWSRunnerImpl"
+               destdir="${wsdl.dir}"
+               resourcedestdir="${wsdl.dir}"
+               sourcedestdir="${wsdl.dir}"
+               keep="${keep}"
+               verbose="${verbose}"
+               genwsdl="true" >
+			<classpath>
+				<pathelement location="${build.classes}"/>
+		        <path refid="jaxws.classpath"/>
+			    <pathelement location="src"/>
+			    <path refid="executionserver.j2se.classpath" />
+				<path refid="executionserver.dsmbean.classpath" />
+    			    <pathelement location="C:/Cases/JRules/HTDS711/PMR54810/Workspace/ClassicXOM/bin"/>
+    			</classpath>
+    	</wsgen>
+    </target> 
+	<target name="build-server-java" depends="verify.jdk, clean" 
+		description="generate the web service" >
+		<taskdef name="apt" classname="com.sun.tools.ws.ant.Apt">
+		    <classpath refid="jaxws.classpath"/>
+		</taskdef>
+		<mkdir dir="wsdl" />
+		<mkdir dir="${build.src}" />
+		
+		<mkdir dir="${build.classes}" />
+		<mkdir dir="${build.war}" />
+		<javac 
+	        	destdir="${build.classes}"
+	        	debug="on" 
+	        	encoding="${encoding}">
+	         <src path="src"/>
+			 <src path="wsdl"/>
+			<classpath>
+			    <path refid="jaxws.classpath"/>
+			    <pathelement location="src"/>
+			    <path refid="executionserver.j2se.classpath" />
+				<path refid="executionserver.dsmbean.classpath" />
+    			    <pathelement location="C:/Cases/JRules/HTDS711/PMR54810/Workspace/ClassicXOM/bin"/>
+    			</classpath>
+		</javac>
+	</target>
+
+	<target name="generate.ra.xml" 
+		description="regenerate the ra.xml file used by the XU">
+    	<mkdir dir="${build.classes}" />
+    	<res-setup xuconfiginput="${executionserver.home}/bin/ra.xml" 
+    				xuconfigoutput="${build.classes}/ra.xml" > 
+    			<property name="plugins" value="{pluginClass=ilog.rules.res.xu.management.IlrManagementMBeanPlugin,xuName=leanWSWebService},{pluginClass=ilog.rules.res.rsm.plugin.IlrExecutionTracePlugin}" />
+    			<property name="trace.autoFlush" value="true" />
+    			<property name="trace.level" value="${log.level}" />
+				<property name="persistence.type" value="datasource" />
+    			<property name="persistence.datasource.jndi" value="jdbc/resdatasource" />
+		</res-setup>
+	</target>
+	
+	<target name="create-war" depends="generate.wsdl, generate.ra.xml" 
+		description="create the war file which contains the web service">
+	    <war warfile="${build.war}/${war.name}" webxml="${etc.dir}/web.xml">
+			<webinf dir="${etc.dir}" includes="sun-jaxws.xml"/>
+			<webinf dir="${etc.dir}" includes="geronimo-web.xml"/>
+			<zipfileset
+				dir="${etc.dir}"
+				includes="*.wsdl, *.xsd"
+				prefix="WEB-INF/wsdl"/>
+			<classes dir="${build.classes}"/>
+    			<classes dir="C:/Cases/JRules/HTDS711/PMR54810/Workspace/ClassicXOM/bin" />
+                <classes file="${basedir}/etc/logging.properties"/>
+            <lib dir="${executionserver.home}/lib/">
+            	<patternset refid="executionserver.dsmbean.classpath.patternset" />
+            </lib>
+            <lib dir="${executionserver.home}/lib/">
+            	<patternset refid="executionserver.j2se.classpath.patternset" />
+            </lib>
+	    </war>
+	</target>  
+
+
+	<target name="deployment.error.message" if="no.deployment.dir" >
+		<fail message="appserver.home or/and deployment.dir are not correctly set in the build.properties file. Please fill the path to allow the deployment"/>
+	</target>
+	<target name="verify.deploy.dir" >
+		<condition property="no.deployment.dir" value="true" >
+			<or>
+				<equals arg1="${appserver.home}" arg2=""/>
+				<equals arg1="${deployment.dir}" arg2=""/>
+			</or>
+		</condition>
+		<antcall target="deployment.error.message" />
+	</target>
+	<target name="deploy.war" depends="verify.deploy.dir, create-war"
+		description="deploy the web service on the application server" >
+   		<copy file="${build.war}/${war.name}"
+         		todir="${deployment.dir}"/>
+	</target>
+
+	<target name="undeploy.war"
+		description="undeploy the web service from the application server">
+   		<delete file="${deployment.dir}/${war.name}"
+				failonerror="false"/>
+	</target>
+	
+  	<target name="deploy.ruleapp" 
+  		description="deploy the RuleApp archive" >
+		<res-deploy hostname="${hostname}" 
+					portnumber="${portnumber}" 
+					userid="${userid}"
+					password="${password}" 
+					file="${basedir}/${ruleapp.name}.jar"/>
+  	</target>
+  
+  	<target name="undeploy.ruleapp" 
+  		description="undeploy the RuleApp archive">		 
+		<res-undeploy hostname="${hostname}" 
+						portnumber="${portnumber}" 
+						userid="${userid}"
+					 	password="${password}" 
+					 	ruleapp="${ruleapp.name}" 
+					 	version="${ruleapp.version}"/>
+  	</target>
+
+
+	
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="ilog.rules.studio.launching.JRulesLocalApplication">
+<stringAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_EXTRACTOR" value=""/>
+<stringAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_EXTRACTOR_ARCHIVE" value=""/>
+<stringAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_PROJECT" value=""/>
+<booleanAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_USE_ALL_RULES" value="false"/>
+<booleanAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_USE_EXTRACTOR" value="false"/>
+<listAttribute key="ilog.rules.studio.launching.IRL_SOURCE_PATH">
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;IRLSourceEntry projectName=&quot;Rules&quot; type=&quot;2&quot;/&gt;"/>
+</listAttribute>
+<booleanAttribute key="ilog.rules.studio.launching.STOP_AT_FIRST_STATEMENT" value="true"/>
+<stringAttribute key="org.eclipse.debug.core.source_locator_id" value="ilog.rules.studio.debug.ui.jrulesSourceLocator"/>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_SOURCE_PATH" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="RuleApp.LeanWSRunnerClient"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="leanWS-client"/>
+<listAttribute key="org.eclipse.jdt.launching.SOURCE_PATH">
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER&quot; path=&quot;2&quot; type=&quot;4&quot;/&gt;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;runtimeClasspathEntry path=&quot;3&quot; projectName=&quot;leanWS-client&quot; type=&quot;1&quot;/&gt;"/>
+</listAttribute>
+</launchConfiguration>

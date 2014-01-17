@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="leanWSclient"  default="generate-client" basedir=".">
+    <property file="build.properties"/>
+
+	<patternset id="jaxws.jar.files">
+		<include name="activation.jar" />
+		<include name="FastInfoset.jar" />
+		<include name="jaxb-api.jar" />
+		<include name="jaxb-impl.jar" />
+		<include name="jaxb-xjc.jar" />
+		<include name="jaxws-api.jar" />
+		<include name="jaxws-rt.jar" />
+		<include name="jaxws-tools.jar" />
+		<include name="jsr173_api.jar" />
+		<include name="jsr181-api.jar" />
+		<include name="saaj-api.jar" />
+		<include name="saaj-impl.jar" />
+		<include name="sjsxp.jar" />
+		<include name="http.jar" />
+		<include name="jsr250-api.jar" />
+		<include name="resolver.jar" />
+		<include name="stax-ex.jar" />
+		<include name="streambuffer.jar" />
+	</patternset>
+
+	<path id="jaxws.classpath">
+	    <pathelement location="${java.home}/../lib/tools.jar"/>
+	    <fileset dir="${executionserver.home}/lib/jaxws" >
+		    <patternset refid="jaxws.jar.files" />
+	    </fileset>
+		<pathelement location="${executionserver.home}/lib/junit-3.8.1.jar"/>
+	</path>
+	
+	<target name="usage" description="display the usage" >
+	<echo> 
+	Main targets:
+		generate-client    generate the needed classes from the wsdl file
+		compile            compile the generated classes and the Client java file
+		run                execute the client
+ 		usage              display the usage
+	Default target: generate-client
+	</echo>
+	</target>
+	
+	<target name="get.tools.jar" description="Verify that the tools.jar file is present" > 
+		<condition property="isToolsJarFile" >
+			<available file="${java.home}/../lib/tools.jar" />
+		</condition>
+	</target>
+	
+	<target name="verify.jdk" depends="get.tools.jar"
+			description="Verify that the environment is correct to execute the targets" >
+		<fail unless="isToolsJarFile" message="${java.home}/../lib/tools.jar is not found. Please verify your JDK installation." />
+	</target> 
+		
+	<target name="generate-client" depends="verify.jdk" 
+			description="generate the needed classes from the wsdl file"  >
+		<taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+		    <classpath refid="jaxws.classpath"/>
+		</taskdef>
+		<mkdir dir="${build.src}" />
+		<mkdir dir="${build.classes}" />
+	    <wsimport debug="${debug}"
+	                verbose="${verbose}"
+	                keep="${keep}"
+	                extension="${extension}"
+	                destdir="${build.classes}"
+	                sourcedestdir="${build.src}"
+	                wsdl="${client.local.wsdl}"
+	                wsdllocation="${client.wsdl}"
+	                package="RuleApp" />
+	</target>
+
+	<target name="compile" depends="generate-client"
+		description="compile the generated classes and the Client java file" >
+		<javac fork="true"
+			   				   	srcdir="${build.src}:${basedir}/src"
+			   				   	excludes="**/package-info.java" 
+			   	destdir="${build.classes}"
+				debuglevel="${debug}"
+			    includes="**"
+			    encoding="${encoding}">
+			<classpath refid="jaxws.classpath"/>
+		</javac>
+	    <javac fork="true"
+	          	srcdir="${build.src}"
+			   	includes="**/package-info.java"
+			   	destdir="${build.classes}"
+				debuglevel="${debug}" 
+				encoding="${encoding}">
+	     	<classpath refid="jaxws.classpath"/>
+	   	</javac>
+	</target>
+
+	<target name="run" depends="compile" description="execute the client" >
+		<java fork="true" classname="${client}">
+	    	<classpath>
+	        	<path refid="jaxws.classpath"/>
+	            <pathelement location="${build.classes}"/>
+	            <pathelement location="${etc.dir}"/>
+	         </classpath>
+	    </java>
+	</target>	
+	
+
+</project>

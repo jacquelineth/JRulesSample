@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+  <name value="WebSphere CE for TestWebService ">  </name>
+  <url value="http://localhost:8080/res">  </url>
+  <appliurl value="http://localhost:8080/jaxws-RuleApp/TestService">  </appliurl>
+  <uuid value="_NKb6kX8mEeOZ4N2w0PnFyA">  </uuid>
+  <application-server>true</application-server>
+  <res-console-deployed>true</res-console-deployed>
+  <type>WebSphere CE</type>
+  <install-directory>C:/ILOG/JRules7115/shared/tools/AppServerCommunityEdition</install-directory>
+  <deployment-directory>C:/ILOG/JRules7115/shared/tools/AppServerCommunityEdition/deploy</deployment-directory>
+  <deployment>
+    <mode>CONSOLE</mode>
+  </deployment>
+</server>

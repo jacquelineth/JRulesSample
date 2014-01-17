@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="build/src"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jrules-res-execution.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/resolver.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jsr250-api.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/http.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/sjsxp.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/saaj-impl.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/saaj-api.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jsr181-api.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jsr173_api.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jaxws-tools.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jaxws-rt.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jaxws-api.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jaxb-xjc.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jaxb-impl.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/jaxb-api.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/FastInfoset.jar"/>
+	<classpathentry kind="var" path="ILOG_EXECUTION_SERVER_HOME/lib/jaxws/activation.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

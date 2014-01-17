@@ -11,6 +11,6 @@
 	<classpathentry kind="var" path="ILOG_BR_STUDIO_HOME/lib/jrules-engine.jar"/>
 	<classpathentry kind="var" path="ILOG_BR_STUDIO_HOME/lib/sam.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ClassicXOM"/>
-	<classpathentry kind="var" path="ILOG_BR_STUDIO_HOME/lib/jdom-1.1.2.jar"/>
+	<classpathentry kind="var" path="ILOG_BR_STUDIO_HOME/lib/jdom-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

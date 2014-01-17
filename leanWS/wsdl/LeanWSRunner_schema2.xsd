@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://RuleApp" xmlns:tns="http://RuleApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Rules" nillable="true" type="tns:rulesRequest"/>
+
+  <xs:element name="RulesetExecutionException" type="tns:RulesetExecutionException"/>
+
+  <xs:complexType name="rulesRequest">
+    <xs:sequence>
+      <xs:element name="counter" type="xs:short"/>
+      <xs:element name="executionId" type="xs:string" minOccurs="0"/>
+      <xs:element name="myMainportfolio" type="tns:portfolio" minOccurs="0"/>
+      <xs:element name="mySecondaryportfolio" type="tns:portfolio" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="portfolio">
+    <xs:sequence>
+      <xs:element name="customersList" type="tns:customer" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customer">
+    <xs:sequence>
+      <xs:element name="category" type="tns:category" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="CumulatedPurchase" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rulesResult">
+    <xs:sequence>
+      <xs:element name="exectime" type="xs:long"/>
+      <xs:element name="executionId" type="xs:string" minOccurs="0"/>
+      <xs:element name="myMainportfolio" type="tns:portfolio" minOccurs="0"/>
+      <xs:element name="mySecondaryportfolio" type="tns:portfolio" minOccurs="0"/>
+      <xs:element name="outputString" type="xs:string" minOccurs="0"/>
+      <xs:element name="store" type="tns:store" minOccurs="0"/>
+      <xs:element name="userdata" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="store">
+    <xs:sequence>
+      <xs:element name="legalStockValue" type="xs:int" minOccurs="0"/>
+      <xs:element name="computedValue" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RulesetExecutionException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+      <xs:element name="rulesetName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="category">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Centurion"/>
+      <xs:enumeration value="Platinum"/>
+      <xs:enumeration value="Gold"/>
+      <xs:enumeration value="Silver"/>
+      <xs:enumeration value="Exclusive"/>
+      <xs:enumeration value="Business"/>
+      <xs:enumeration value="Express"/>
+      <xs:enumeration value="Distinguished"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
