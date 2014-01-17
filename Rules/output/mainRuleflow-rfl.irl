@@ -13,7 +13,7 @@ flowtask mainRuleflow {
   };
   finalaction {
     Exectime=System.currentTimeMillis()-Exectime;
-    out.print("Temps :"+Exectime);
+    note("Temps :"+Exectime);
 
   };
   body {
@@ -27,8 +27,9 @@ flowtask mainRuleflow {
 ruletask mainRuleflow#rulePackage {
   property ilog.rules.business_name = "mainRuleflow>rulePackage";
   property ilog.rules.package_name = "";
-  algorithm = default;
-  ordering = dynamic;
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = literal;
   body {
     rulePackage.businessRule
   }

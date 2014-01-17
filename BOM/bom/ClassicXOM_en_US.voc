@@ -1,6 +1,11 @@
 # Vocabulary Properties
 uuid = 9eeb5f97-07b0-47ca-b216-575c2b5b34a4
 
+# com.ibm.support.PMR.Article
+com.ibm.support.PMR.Article#concept.label = article
+com.ibm.support.PMR.Article.getAffordableArticle(int)#phrase.navigation = {this}.getAffordableArticle({0})
+com.ibm.support.PMR.Article.price#phrase.navigation = {price} of {this} as an article
+
 # com.ibm.support.PMR.Category
 com.ibm.support.PMR.Category#concept.label = category
 com.ibm.support.PMR.Category.Business#instance.label = Business
@@ -20,6 +25,86 @@ com.ibm.support.PMR.Customer.category#phrase.navigation = {category} of {this}
 com.ibm.support.PMR.Customer.name#phrase.action = set the name of {this} to {name}
 com.ibm.support.PMR.Customer.name#phrase.navigation = {name} of {this}
 
+# com.ibm.support.PMR.Food
+com.ibm.support.PMR.Food#concept.label = com.ibm.support.PMR.Food
+com.ibm.support.PMR.Food.AliceMutton#instance.label = Alice Mutton
+com.ibm.support.PMR.Food.Aniseed_Syrup#instance.label = Aniseed Syrup
+com.ibm.support.PMR.Food.BostonCrabMeat#instance.label = Boston Crab Meat
+com.ibm.support.PMR.Food.CamembertPierrot#instance.label = Camembert Pierrot
+com.ibm.support.PMR.Food.CarnarvonTigers#instance.label = Carnarvon Tigers
+com.ibm.support.PMR.Food.Chai#instance.label = Chai
+com.ibm.support.PMR.Food.Chang#instance.label = Chang
+com.ibm.support.PMR.Food.ChartreuseVerte#instance.label = Chartreuse verte
+com.ibm.support.PMR.Food.ChefAntonCajunSeasoning#instance.label = Chef Anton's Cajun Seasoning
+com.ibm.support.PMR.Food.ChefAntonGumboMix#instance.label = Chef Anton's Gumbo Mix
+com.ibm.support.PMR.Food.Chocolade#instance.label = Chocolade
+com.ibm.support.PMR.Food.CôteDeBlaye#instance.label = Côte de Blaye
+com.ibm.support.PMR.Food.EscargotsDeBourgogne#instance.label = Escargots de Bourgogne
+com.ibm.support.PMR.Food.FiloMix#instance.label = Filo Mix
+com.ibm.support.PMR.Food.Flotemysost#instance.label = Flotemysost
+com.ibm.support.PMR.Food.Geitost#instance.label = Geitost
+com.ibm.support.PMR.Food.GenenShouyu#instance.label = Genen Shouyu
+com.ibm.support.PMR.Food.GnocchiDiNonnaAlice#instance.label = Gnocchi di nonna Alice
+com.ibm.support.PMR.Food.GorgonzolaTelino#instance.label = Gorgonzola Telino
+com.ibm.support.PMR.Food.GrandmaBoysenberrySpread#instance.label = Grandma's Boysenberry Spread
+com.ibm.support.PMR.Food.GravadLax#instance.label = Gravad lax
+com.ibm.support.PMR.Food.GuaranáFantástica#instance.label = Guaraná Fantástica
+com.ibm.support.PMR.Food.Gudbrandsdalsost#instance.label = Gudbrandsdalsost
+com.ibm.support.PMR.Food.GulaMalacca#instance.label = Gula Malacca
+com.ibm.support.PMR.Food.GumbärGummibärchen#instance.label = Gumbär Gummibärchen
+com.ibm.support.PMR.Food.GustafKnäckebröd#instance.label = Gustaf's Knäckebröd
+com.ibm.support.PMR.Food.Ikura#instance.label = Ikura
+com.ibm.support.PMR.Food.InlagdSill#instance.label = Inlagd Sill
+com.ibm.support.PMR.Food.IpohCoffee#instance.label = Ipoh Coffee
+com.ibm.support.PMR.Food.JackNewEnglandClamChowder#instance.label = Jack's New England Clam Chowder
+com.ibm.support.PMR.Food.Konbu#instance.label = Konbu
+com.ibm.support.PMR.Food.Lakkalikööri#instance.label = Lakkalikööri
+com.ibm.support.PMR.Food.LaughingLumberjackLager#instance.label = Laughing Lumberjack Lager
+com.ibm.support.PMR.Food.LonglifeTofu#instance.label = Longlife Tofu
+com.ibm.support.PMR.Food.LouisianaFieryHotPepperSauce#instance.label = Louisiana Fiery Hot Pepper Sauce
+com.ibm.support.PMR.Food.LouisianaHotSpicedOkra#instance.label = Louisiana Hot Spiced Okra
+com.ibm.support.PMR.Food.ManjimupDriedApples#instance.label = Manjimup Dried Apples
+com.ibm.support.PMR.Food.MascarponeFabioli#instance.label = Mascarpone Fabioli
+com.ibm.support.PMR.Food.Maxilaku#instance.label = Maxilaku
+com.ibm.support.PMR.Food.MishiKobeNiku#instance.label = Mishi Kobe Niku
+com.ibm.support.PMR.Food.MozzarellaDiGiovanni#instance.label = Mozzarella di Giovanni
+com.ibm.support.PMR.Food.NordOstMatjeshering#instance.label = Nord-Ost Matjeshering
+com.ibm.support.PMR.Food.NorthwoodsCranberrySauce#instance.label = Northwoods Cranberry Sauce
+com.ibm.support.PMR.Food.NuNuCaNußNougatCreme#instance.label = NuNuCa Nuß-Nougat-Creme
+com.ibm.support.PMR.Food.OriginalFrankfurterGrüneSoße#instance.label = Original Frankfurter grüne Soße
+com.ibm.support.PMR.Food.OutbackLager#instance.label = Outback Lager
+com.ibm.support.PMR.Food.Pavlova#instance.label = Pavlova
+com.ibm.support.PMR.Food.PerthPasties#instance.label = Perth Pasties
+com.ibm.support.PMR.Food.PâtéChinois#instance.label = Pâté chinois
+com.ibm.support.PMR.Food.QuesoCabrales#instance.label = Queso Cabrales
+com.ibm.support.PMR.Food.QuesoManchegoLaPastora#instance.label = Queso Manchego La Pastora
+com.ibm.support.PMR.Food.RacletteCourdavault#instance.label = Raclette Courdavault
+com.ibm.support.PMR.Food.RavioliAngelo#instance.label = Ravioli Angelo
+com.ibm.support.PMR.Food.RhönbräuKlosterbier#instance.label = Rhönbräu Klosterbier
+com.ibm.support.PMR.Food.RogedeSild#instance.label = Rogede sild
+com.ibm.support.PMR.Food.RödKaviar#instance.label = Röd Kaviar
+com.ibm.support.PMR.Food.RössleSauerkraut#instance.label = Rössle Sauerkraut
+com.ibm.support.PMR.Food.SasquatchAle#instance.label = Sasquatch Ale
+com.ibm.support.PMR.Food.SchoggiSchokolade#instance.label = Schoggi Schokolade
+com.ibm.support.PMR.Food.ScottishLongbreads#instance.label = Scottish Longbreads
+com.ibm.support.PMR.Food.SingaporeanHokkienFriedMee#instance.label = Singaporean Hokkien Fried Mee
+com.ibm.support.PMR.Food.SirRodneyMarmalade#instance.label = Sir Rodney's Marmalade
+com.ibm.support.PMR.Food.SirRodneyScones#instance.label = Sir Rodney's Scones
+com.ibm.support.PMR.Food.SiropDErable#instance.label = Sirop d'érable
+com.ibm.support.PMR.Food.Spegesild#instance.label = Spegesild
+com.ibm.support.PMR.Food.SteeleyeStout#instance.label = Steeleye Stout
+com.ibm.support.PMR.Food.TarteAuSucre#instance.label = Tarte au sucre
+com.ibm.support.PMR.Food.TeatimeChocolateBiscuits#instance.label = Teatime Chocolate Biscuits
+com.ibm.support.PMR.Food.ThüringerRostbratwurst#instance.label = Thüringer Rostbratwurst
+com.ibm.support.PMR.Food.Tofu#instance.label = Tofu
+com.ibm.support.PMR.Food.Tourtière#instance.label = Tourtière
+com.ibm.support.PMR.Food.Tunnbröd#instance.label = Tunnbröd
+com.ibm.support.PMR.Food.UncleBobOrganicDriedPears#instance.label = Uncle Bob's Organic Dried Pears
+com.ibm.support.PMR.Food.ValkoinenSuklaa#instance.label = Valkoinen suklaa
+com.ibm.support.PMR.Food.VegieSpread#instance.label = Vegie-spread
+com.ibm.support.PMR.Food.WimmersGuteSemmelknödel#instance.label = Wimmers gute Semmelknödel
+com.ibm.support.PMR.Food.ZaanseKoeken#instance.label = Zaanse koeken
+
 # com.ibm.support.PMR.Portfolio
 com.ibm.support.PMR.Portfolio#concept.label = portfolio
 com.ibm.support.PMR.Portfolio.addSingleCustomer(com.ibm.support.PMR.Customer)#phrase.action = add {0} to the customers list  of {this}
@@ -29,6 +114,7 @@ com.ibm.support.PMR.Portfolio.customersList#phrase.action = set the customers of
 com.ibm.support.PMR.Portfolio.customersList#phrase.navigation = {customer} of {this}
 com.ibm.support.PMR.Portfolio.removeSingleCustomer(com.ibm.support.PMR.Customer)#phrase.action = remove {0} from the customers list  of {this}
 com.ibm.support.PMR.Portfolio.reverseCategory()#phrase.action = reverseCategory {this}
+com.ibm.support.PMR.Portfolio.toString()#phrase.navigation = {this}.toString()
 
 # com.ibm.support.PMR.Product
 com.ibm.support.PMR.Product#concept.label = product
@@ -45,6 +131,7 @@ com.ibm.support.PMR.Product.Mouse#instance.label = Mouse
 com.ibm.support.PMR.Product.Phone#instance.label = Phone
 com.ibm.support.PMR.Product.USBkey#instance.label = USBkey
 com.ibm.support.PMR.Product.cheapestProduct()#phrase.navigation = cheapest Product
+com.ibm.support.PMR.Product.getAffordableArticle(int)#phrase.navigation = {this}.getAffordableArticle({0})
 com.ibm.support.PMR.Product.getAffordableProduct(int)#phrase.navigation = affordable product for {0}
 com.ibm.support.PMR.Product.price#phrase.navigation = {price} of {this}
 com.ibm.support.PMR.Product.toString()#phrase.navigation = {this} as a string

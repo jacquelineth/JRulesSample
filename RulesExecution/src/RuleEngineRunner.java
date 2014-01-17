@@ -76,7 +76,12 @@ public class RuleEngineRunner {
 	engine = new IlrContext(ruleset);
 	// TODO refine default exception handler
 	IlrExceptionHandler exceptionHandler = new IlrExceptionHandler() {
-	    public boolean handleException(IlrUserRuntimeException ex) {
+	    /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public boolean handleException(IlrUserRuntimeException ex) {
 		if (ex.isInConditions())
 		    return false;
 		else
@@ -92,7 +97,8 @@ public class RuleEngineRunner {
      * @param the collection of objects to insert
      * @throws IlrUserRuntimeException when provided objects throw exceptions during their insertion
      */
-    public void declareWorkingMemoryObjects(Collection objects)
+    @SuppressWarnings("rawtypes")
+	public void declareWorkingMemoryObjects(Collection objects)
 	    throws IlrUserRuntimeException {
 	if (objects == null)
 	    return;
@@ -169,7 +175,8 @@ return outputs.getIntValue("ilog.rules.firedRulesCount");
 
 	    //	Feed the engine working memory
 	    //	TODO populate objects collection for working memory
-	    Collection objects = null;
+	    @SuppressWarnings("rawtypes")
+		Collection objects = null;
 	    runner.declareWorkingMemoryObjects(objects);
 
 	    // Execute the rules

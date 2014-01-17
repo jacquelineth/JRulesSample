@@ -15,4 +15,10 @@
 	<natures>
 		<nature>ilog.rules.studio.model.ruleNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>Domains</name>
+			<value>$%7BPROJECT_LOC%7D/resources</value>
+		</variable>
+	</variableList>
 </projectDescription>

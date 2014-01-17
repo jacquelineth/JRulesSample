@@ -8,9 +8,10 @@
   <categories>Poor</categories>
   <categories>MiddeClass</categories>
   <categories>WorkingClass</categories>
+  <rulesetProperties></rulesetProperties>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
-    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
-    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="ClassicXOM" url="platform:/ClassicXOM" kind="JAVA_PROJECT"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="ClassicXOM" url="platform:/ClassicXOM" kind="JAVA_PROJECT" exported="true"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="modeljava" url="platform:/BOM/bom/modeljava.bom" origin="xom:/BOM/org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -32,5 +33,8 @@
   </modelFolders>
   <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
     <name>queries</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:ResourceFolder">
+    <name>resources</name>
   </modelFolders>
 </ilog.rules.studio.model.base:RuleProject>

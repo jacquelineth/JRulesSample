@@ -3,6 +3,472 @@
         xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
     <id>88cff440-6138-43ad-9610-5372de9cc2bd</id>
     <class>
+        <businessName>com.ibm.support.PMR.Food</businessName>
+        <executionName>com.ibm.support.PMR.Article</executionName>
+        <attribute>
+            <name>AliceMutton</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Alice Mutton");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Aniseed_Syrup</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Aniseed Syrup");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>BostonCrabMeat</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Boston Crab Meat");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CamembertPierrot</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Camembert Pierrot");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CarnarvonTigers</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Carnarvon Tigers");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Chai</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Chai");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Chang</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Chang");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ChartreuseVerte</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Chartreuse verte");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ChefAntonCajunSeasoning</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Chef Anton's Cajun Seasoning");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ChefAntonGumboMix</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Chef Anton's Gumbo Mix");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Chocolade</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Chocolade");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CôteDeBlaye</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Côte de Blaye");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>EscargotsDeBourgogne</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Escargots de Bourgogne");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>FiloMix</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Filo Mix");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Flotemysost</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Flotemysost");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Geitost</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Geitost");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GenenShouyu</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Genen Shouyu");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GnocchiDiNonnaAlice</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gnocchi di nonna Alice");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GorgonzolaTelino</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gorgonzola Telino");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GrandmaBoysenberrySpread</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Grandma's Boysenberry Spread");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GravadLax</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gravad lax");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GuaranáFantástica</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Guaraná Fantástica");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Gudbrandsdalsost</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gudbrandsdalsost");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GulaMalacca</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gula Malacca");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GumbärGummibärchen</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gumbär Gummibärchen");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>GustafKnäckebröd</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Gustaf's Knäckebröd");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Ikura</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Ikura");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>InlagdSill</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Inlagd Sill");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>IpohCoffee</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Ipoh Coffee");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>JackNewEnglandClamChowder</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Jack's New England Clam Chowder");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Konbu</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Konbu");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Lakkalikööri</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Lakkalikööri");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>LaughingLumberjackLager</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Laughing Lumberjack Lager");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>LonglifeTofu</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Longlife Tofu");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>LouisianaFieryHotPepperSauce</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Louisiana Fiery Hot Pepper Sauce");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>LouisianaHotSpicedOkra</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Louisiana Hot Spiced Okra");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ManjimupDriedApples</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Manjimup Dried Apples");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MascarponeFabioli</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Mascarpone Fabioli");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Maxilaku</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Maxilaku");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MishiKobeNiku</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Mishi Kobe Niku");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>MozzarellaDiGiovanni</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Mozzarella di Giovanni");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NordOstMatjeshering</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Nord-Ost Matjeshering");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NorthwoodsCranberrySauce</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Northwoods Cranberry Sauce");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>NuNuCaNußNougatCreme</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "NuNuCa Nuß-Nougat-Crème");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>OriginalFrankfurterGrüneSoße</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Original Frankfurter grüne Soße");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>OutbackLager</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Outback Lager");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Pavlova</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Pavlova");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PerthPasties</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Perth Pasties");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>PâtéChinois</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Pâté chinois");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>QuesoCabrales</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Queso Cabrales");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>QuesoManchegoLaPastora</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Queso Manchego La Pastora");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>RacletteCourdavault</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Raclette Courdavault");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>RavioliAngelo</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Ravioli Angelo");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>RhönbräuKlosterbier</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Rhönbräu Klosterbier");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>RogedeSild</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Rogede sild");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>RödKaviar</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Röd Kaviar");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>RössleSauerkraut</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Rössle Sauerkraut");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SasquatchAle</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Sasquatch Ale");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SchoggiSchokolade</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Schoggi Schokolade");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ScottishLongbreads</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Scottish Longbreads");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SingaporeanHokkienFriedMee</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Singaporean Hokkien Fried Mee");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SirRodneyMarmalade</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Sir Rodney's Marmalade");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SirRodneyScones</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Sir Rodney's Scones");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SiropDErable</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Sirop d'érable");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Spegesild</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Spegesild");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SteeleyeStout</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Steeleye Stout");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>TarteAuSucre</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Tarte au sucre");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>TeatimeChocolateBiscuits</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Teatime Chocolate Biscuits");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ThüringerRostbratwurst</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Thüringer Rostbratwurst");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tofu</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Tofu");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tourtière</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Tourtière");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>Tunnbröd</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Tunnbröd");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>UncleBobOrganicDriedPears</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Uncle Bob's Organic Dried Pears");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ValkoinenSuklaa</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Valkoinen suklaa");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>VegieSpread</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Vegie-spread");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>WimmersGuteSemmelknödel</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Wimmers gute Semmelknödel");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ZaanseKoeken</name>
+            <getter language="irl"><![CDATA[
+            return new com.ibm.support.PMR.SellableArticle( "Zaanse koeken");
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
         <businessName>com.ibm.support.PMR.Portfolio</businessName>
         <import>com.ibm.support.PMR.*</import>
         <import>com.ibm.support.PMR.Portfolio</import>

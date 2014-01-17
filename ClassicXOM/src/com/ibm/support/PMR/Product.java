@@ -6,9 +6,10 @@ import java.util.EnumSet;
  * @author thierry
  *
  */
-public enum Product {
+public enum Product implements Article {
 	Cola(1),Bread(2),Burger(5),CD(10),DVD(20),USBkey(25),Mouse(50),Game(75),LavaLamp(100),Laptop(300),Monitor(400),Phone(500);
 	 private int price;
+	
 	 public int getPrice() {
 		    return price;
 	 }
@@ -32,4 +33,10 @@ public enum Product {
 		 }
 		 return ((Product)list[0]);
 	 }
+	@Override
+	public Article getAffordableArticle(int max) {
+		
+		return getAffordableProduct(max);
+	}
+
 }
