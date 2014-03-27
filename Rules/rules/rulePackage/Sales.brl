@@ -12,4 +12,5 @@
 	add variable4 to the sales of variable1 ; 
 	set the cumulated purchase of variable2 to  variable3 - the price of variable4 ;
 	print "sale "+ the name of variable2 +" of  " + variable4 as a string  ;]]></definition>
+  <severity>4</severity>
 </ilog.rules.studio.model.brl:ActionRule>

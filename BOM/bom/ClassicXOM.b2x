@@ -4,7 +4,8 @@
     <id>88cff440-6138-43ad-9610-5372de9cc2bd</id>
     <class>
         <businessName>com.ibm.support.PMR.Food</businessName>
-        <executionName>com.ibm.support.PMR.Article</executionName>
+        <executionName>com.ibm.support.PMR.SellableArticle</executionName>
+        <import>com.ibm.support.PMR.Article</import>
         <attribute>
             <name>AliceMutton</name>
             <getter language="irl"><![CDATA[
@@ -428,7 +429,9 @@
         <attribute>
             <name>Tourtière</name>
             <getter language="irl"><![CDATA[
-            return new com.ibm.support.PMR.SellableArticle( "Tourtière");
+            //return new com.ibm.support.PMR.SellableArticle( "Tourtière");
+
+return new com.ibm.support.PMR.SellableArticle("Tourtière");
             ]]></getter>
         </attribute>
         <attribute>

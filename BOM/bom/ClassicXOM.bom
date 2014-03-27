@@ -32,9 +32,20 @@ public final class Category
 public class Customer
         extends java.io.Serializable
 {
+
+    public class Phone
+            extends java.io.Serializable
+    {
+        public string content;
+        public readonly boolean untrusted;
+        public Phone(com.ibm.support.PMR.Customer arg);
+    }
     public int CumulatedPurchase
                 property update "true";
+    public java.util.ArrayList allCCs domain 0,* class com.ibm.support.PMR.Customer.CreditCard;
     public com.ibm.support.PMR.Category category;
+    public com.ibm.support.PMR.Customer.Phone firstAddedPhone;
+    public com.ibm.support.PMR.Customer.Phone lasstAddedPhone;
     public string name;
     public Customer();
 }
@@ -48,7 +59,86 @@ public class Food
         property domainProviderResource "NorthwindProduct.xlsx"
         property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
 {
-    domain {static Chai, static Chang, static Aniseed_Syrup, static ChefAntonCajunSeasoning, static ChefAntonGumboMix, static GrandmaBoysenberrySpread, static UncleBobOrganicDriedPears, static NorthwoodsCranberrySauce, static MishiKobeNiku, static Ikura, static QuesoCabrales, static QuesoManchegoLaPastora, static Konbu, static Tofu, static GenenShouyu, static Pavlova, static AliceMutton, static CarnarvonTigers, static TeatimeChocolateBiscuits, static SirRodneyMarmalade, static SirRodneyScones, static GustafKnäckebröd, static Tunnbröd, static GuaranáFantástica, static NuNuCaNußNougatCreme, static GumbärGummibärchen, static SchoggiSchokolade, static RössleSauerkraut, static ThüringerRostbratwurst, static NordOstMatjeshering, static GorgonzolaTelino, static MascarponeFabioli, static Geitost, static SasquatchAle, static SteeleyeStout, static InlagdSill, static GravadLax, static CôteDeBlaye, static ChartreuseVerte, static BostonCrabMeat, static JackNewEnglandClamChowder, static SingaporeanHokkienFriedMee, static IpohCoffee, static GulaMalacca, static RogedeSild, static Spegesild, static ZaanseKoeken, static Chocolade, static Maxilaku, static ValkoinenSuklaa, static ManjimupDriedApples, static FiloMix, static PerthPasties, static Tourtière, static PâtéChinois, static GnocchiDiNonnaAlice, static RavioliAngelo, static EscargotsDeBourgogne, static RacletteCourdavault, static CamembertPierrot, static SiropDErable, static TarteAuSucre, static VegieSpread, static WimmersGuteSemmelknödel, static LouisianaFieryHotPepperSauce, static LouisianaHotSpicedOkra, static LaughingLumberjackLager, static ScottishLongbreads, static Gudbrandsdalsost, static OutbackLager, static Flotemysost, static MozzarellaDiGiovanni, static RödKaviar, static LonglifeTofu, static RhönbräuKlosterbier, static Lakkalikööri, static OriginalFrankfurterGrüneSoße}
+    domain 
+    {
+        static Chai,
+        static Chang,
+        static Aniseed_Syrup,
+        static ChefAntonCajunSeasoning,
+        static ChefAntonGumboMix,
+        static GrandmaBoysenberrySpread,
+        static UncleBobOrganicDriedPears,
+        static NorthwoodsCranberrySauce,
+        static MishiKobeNiku,
+        static Ikura,
+        static QuesoCabrales,
+        static QuesoManchegoLaPastora,
+        static Konbu,
+        static Tofu,
+        static GenenShouyu,
+        static Pavlova,
+        static AliceMutton,
+        static CarnarvonTigers,
+        static TeatimeChocolateBiscuits,
+        static SirRodneyMarmalade,
+        static SirRodneyScones,
+        static GustafKnäckebröd,
+        static Tunnbröd,
+        static GuaranáFantástica,
+        static NuNuCaNußNougatCreme,
+        static GumbärGummibärchen,
+        static SchoggiSchokolade,
+        static RössleSauerkraut,
+        static ThüringerRostbratwurst,
+        static NordOstMatjeshering,
+        static GorgonzolaTelino,
+        static MascarponeFabioli,
+        static Geitost,
+        static SasquatchAle,
+        static SteeleyeStout,
+        static InlagdSill,
+        static GravadLax,
+        static CôteDeBlaye,
+        static ChartreuseVerte,
+        static BostonCrabMeat,
+        static JackNewEnglandClamChowder,
+        static SingaporeanHokkienFriedMee,
+        static IpohCoffee,
+        static GulaMalacca,
+        static RogedeSild,
+        static Spegesild,
+        static ZaanseKoeken,
+        static Chocolade,
+        static Maxilaku,
+        static ValkoinenSuklaa,
+        static ManjimupDriedApples,
+        static FiloMix,
+        static PerthPasties,
+        static Tourtière,
+        static PâtéChinois,
+        static GnocchiDiNonnaAlice,
+        static RavioliAngelo,
+        static EscargotsDeBourgogne,
+        static RacletteCourdavault,
+        static CamembertPierrot,
+        static SiropDErable,
+        static TarteAuSucre,
+        static VegieSpread,
+        static WimmersGuteSemmelknödel,
+        static LouisianaFieryHotPepperSauce,
+        static LouisianaHotSpicedOkra,
+        static LaughingLumberjackLager,
+        static ScottishLongbreads,
+        static Gudbrandsdalsost,
+        static OutbackLager,
+        static Flotemysost,
+        static MozzarellaDiGiovanni,
+        static RödKaviar,
+        static LonglifeTofu,
+        static RhönbräuKlosterbier,
+        static Lakkalikööri,
+        static OriginalFrankfurterGrüneSoße
+    }
     public static final readonly com.ibm.support.PMR.Food AliceMutton
                 property price "39";
     public static final readonly com.ibm.support.PMR.Food Aniseed_Syrup
@@ -243,6 +333,18 @@ public final class Product
     public string toString();
     public static com.ibm.support.PMR.Product valueOf(string arg);
     public static com.ibm.support.PMR.Product[] values();
+}
+
+public class SellableArticle
+        implements com.ibm.support.PMR.Article
+{
+    public readonly string name;
+    public int price;
+    public SellableArticle(object arg);
+    public SellableArticle(string arg);
+    public SellableArticle(string arg1, float arg2);
+    public SellableArticle(string arg1, int arg2);
+    public com.ibm.support.PMR.Article getAffordableArticle(int arg);
 }
 
 public class Store

@@ -16,11 +16,10 @@
 	<natures>
 		<nature>ilog.rules.studio.model.ruleNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>resources</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/BOM/resources</locationURI>
-		</link>
-	</linkedResources>
+	<variableList>
+		<variable>
+			<name>Domains</name>
+			<value>$%7BPROJECT_LOC%7D/resources</value>
+		</variable>
+	</variableList>
 </projectDescription>

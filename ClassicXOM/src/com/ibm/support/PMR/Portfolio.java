@@ -9,6 +9,7 @@ public class Portfolio implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -8635316652052168668L;
+	
 	public java.util.Vector<Customer> customersList; //domain 0,* class org.example.portfolioschema.Customer;
 	 public Portfolio(){
 		 customersList=new Vector<Customer>();

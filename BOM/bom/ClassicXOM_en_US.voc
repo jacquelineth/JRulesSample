@@ -20,8 +20,20 @@ com.ibm.support.PMR.Category.Silver#instance.label = Silver
 com.ibm.support.PMR.Customer#concept.label = customer
 com.ibm.support.PMR.Customer.CumulatedPurchase#phrase.action = set the cumulated purchase of {this} to {cumulated purchase}
 com.ibm.support.PMR.Customer.CumulatedPurchase#phrase.navigation = {cumulated purchase} of {this}
+
+# com.ibm.support.PMR.Customer.Phone
+com.ibm.support.PMR.Customer.Phone#concept.label = phone
+com.ibm.support.PMR.Customer.Phone.content#phrase.action = set the content of {this} to {content}
+com.ibm.support.PMR.Customer.Phone.content#phrase.navigation = {content} of {this}
+com.ibm.support.PMR.Customer.Phone.untrusted#phrase.navigation = {this} is untrusted
+com.ibm.support.PMR.Customer.allCCs#phrase.action = set the all CCs of {this} to {all CC}
+com.ibm.support.PMR.Customer.allCCs#phrase.navigation = {all CC} of {this}
 com.ibm.support.PMR.Customer.category#phrase.action = set the category of {this} to {category}
 com.ibm.support.PMR.Customer.category#phrase.navigation = {category} of {this}
+com.ibm.support.PMR.Customer.firstAddedPhone#phrase.action = set the first added phone of {this} to {first added phone}
+com.ibm.support.PMR.Customer.firstAddedPhone#phrase.navigation = {first added phone} of {this}
+com.ibm.support.PMR.Customer.lasstAddedPhone#phrase.action = set the lasst added phone of {this} to {lasst added phone}
+com.ibm.support.PMR.Customer.lasstAddedPhone#phrase.navigation = {lasst added phone} of {this}
 com.ibm.support.PMR.Customer.name#phrase.action = set the name of {this} to {name}
 com.ibm.support.PMR.Customer.name#phrase.navigation = {name} of {this}
 
@@ -135,6 +147,13 @@ com.ibm.support.PMR.Product.getAffordableArticle(int)#phrase.navigation = {this}
 com.ibm.support.PMR.Product.getAffordableProduct(int)#phrase.navigation = affordable product for {0}
 com.ibm.support.PMR.Product.price#phrase.navigation = {price} of {this}
 com.ibm.support.PMR.Product.toString()#phrase.navigation = {this} as a string
+
+# com.ibm.support.PMR.SellableArticle
+com.ibm.support.PMR.SellableArticle#concept.label = sellable article
+com.ibm.support.PMR.SellableArticle.getAffordableArticle(int)#phrase.navigation = {this}.getAffordableArticle({0})
+com.ibm.support.PMR.SellableArticle.name#phrase.navigation = {name} of {this}
+com.ibm.support.PMR.SellableArticle.price#phrase.action = set the price of {this} to {price}
+com.ibm.support.PMR.SellableArticle.price#phrase.navigation = {price} of {this}
 
 # com.ibm.support.PMR.Store
 com.ibm.support.PMR.Store#concept.label = store

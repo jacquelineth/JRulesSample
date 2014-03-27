@@ -8,7 +8,7 @@
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="BOM" url="platform:/BOM" kind="RULE_PROJECT"/>
   </paths>
-  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM" pathEntriesModified="true">
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:ProjectBOMEntry" name="BOM" url="platform:/BOM" kind="RULE_PROJECT">
       <ruleProject href="BOM#bf78e194-0141-4198-b202-1c11010a4e9e"/>
     </entries>
@@ -24,5 +24,8 @@
   </modelFolders>
   <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
     <name>queries</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:ResourceFolder">
+    <name>resources</name>
   </modelFolders>
 </ilog.rules.studio.model.base:RuleProject>
