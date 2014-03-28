@@ -11,7 +11,9 @@ public Category category;
    public String  name;
    public int CumulatedPurchase;
    public Customer(){
-	   allCCs= new ArrayList<Customer.CreditCard>(Arrays.asList(new CreditCard() ));
+	   allCCs= new ArrayList<Customer.CreditCard>(Arrays.asList(new CreditCard(), new CreditCard() ));
+	   firstAddedPhone =new Phone();
+	   lastAddedPhone =new Phone();
    }
    
    
@@ -21,6 +23,7 @@ public Category category;
    
    public class Phone implements Serializable{
 	private static final long serialVersionUID = 1238621205366379211L;
+	public Phone(){content=new String();}
 	public String content;
 	   public boolean isUntrusted(){return content.isEmpty();}
    }

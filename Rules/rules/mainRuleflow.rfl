@@ -40,6 +40,8 @@ for (int j=0; j<CategorySize;j++){
         <RuleList>
           <Rule Uuid="0869355c-49cb-4958-abcd-03bd75e4737e"/>
           <Package Name="level1.level2"/>
+          <Rule Uuid="c5407bfb-4bf5-4ac1-9126-3d65907c3902"/>
+          <Rule Uuid="2e363a3f-00c6-4d3d-92de-7c42512c5dea"/>
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_3" Ordering="Default">
@@ -72,38 +74,40 @@ note("Temps :"+Exectime);]]></Actions>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_2#height">40.0</Data>
-      <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_4#x">52.354492</Data>
-      <Data Name="node_4#name">node_3</Data>
-      <Data Name="node_4#y">99.70117</Data>
-      <Data Name="node_3#y">166.0</Data>
-      <Data Name="node_2#label">rules execution</Data>
-      <Data Name="node_3#name">node_1</Data>
-      <Data Name="node_1#name">node_1</Data>
-      <Data Name="node_4#label">Init Task</Data>
-      <Data Name="node_3#x">-104.0</Data>
-      <Data Name="node_1#width">22.000004</Data>
-      <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_0#name">node_0</Data>
       <Data Name="node_5#height">40.0</Data>
-      <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_5#name">node_1</Data>
-      <Data Name="node_2#width">108.708984</Data>
-      <Data Name="node_5#width">102.0</Data>
-      <Data Name="node_5#label">Taxes</Data>
-      <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_0#x">54.354492</Data>
-      <Data Name="node_3#label">Sales</Data>
-      <Data Name="node_4#height">53.402344</Data>
-      <Data Name="node_1#x">56.15448</Data>
-      <Data Name="node_4#width">104.0332</Data>
-      <Data Name="node_1#y">276.40234</Data>
+      <Data Name="node_3#height">40.0</Data>
       <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_4#name">node_3</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_2#label">rules execution</Data>
+      <Data Name="node_3#label">Sales</Data>
+      <Data Name="node_0#x">54.354492</Data>
+      <Data Name="node_4#label">Init Task</Data>
+      <Data Name="node_5#label">Taxes</Data>
+      <Data Name="node_1#x">56.15448</Data>
+      <Data Name="node_0#y">10.5</Data>
       <Data Name="node_2#x">54.354492</Data>
+      <Data Name="node_1#y">276.40234</Data>
       <Data Name="node_2#y">194.40234</Data>
-      <Data Name="node_5#y">184.0</Data>
+      <Data Name="node_3#x">-103.0</Data>
+      <Data Name="node_3#y">166.0</Data>
+      <Data Name="node_4#x">52.354492</Data>
       <Data Name="node_5#x">197.0</Data>
+      <Data Name="node_4#y">99.70117</Data>
+      <Data Name="node_5#y">184.0</Data>
+      <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_2#height">40.0</Data>
+      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_1#width">22.000004</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_3#name">node_1</Data>
+      <Data Name="node_2#width">108.708984</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_1#name">node_1</Data>
+      <Data Name="node_4#width">104.0332</Data>
+      <Data Name="node_5#width">102.0</Data>
     </ResourceSet>
   </Resources>
   <Properties>

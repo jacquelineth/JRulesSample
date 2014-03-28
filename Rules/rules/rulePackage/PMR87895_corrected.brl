@@ -8,6 +8,6 @@
 if any of the following conditions is true : 
 		- the first added phone of variable1 is untrusted 
 		- the last added phone of variable1 is untrusted 
-		and there are more than 0 credit cards  in the all CCs of variable1 
+		and there are more than 0 credit cards  in the all CCs of variable1 ,
 then print "Correct Rule matched" ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
