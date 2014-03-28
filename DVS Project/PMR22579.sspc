@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customization>
+  <name value="PMR22579">  </name>
+  <uuid value="_m27v4avGEeOs4fKdL3gJpw">  </uuid>
+  <ruleprojects>
+    <ruleproject name="Rules"/>
+  </ruleprojects>
+  <configurations>
+    <configuration name="IBM&#32;WebSphere&#32;AS&#32;8.5"/>
+    <configuration name="IBM&#32;WebSphere&#32;AS&#32;8.5&#32;9088"/>
+  </configurations>
+  <formats>
+  </formats>
+</customization>

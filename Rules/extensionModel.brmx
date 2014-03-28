@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:extension-model xmlns:model="http://ilog.rules.brms.extension/model" name="defaultExtension" nsURI="http://ilog.rules.brms.extension/default">
+  <add-property className="BusinessRule">
+    <property extractable="true" name="severity" type="Severity"/>
+  </add-property>
+  <add-property className="Rule">
+    <property extractable="true" name="effectiveDate" type="Date">
+      <annotation id="validator-class" value="ilog.rules.teamserver.web.validator.IlrComparablePropertyValidator"/>
+      <annotation id="validator-compared-property" value="expirationDate"/>
+      <annotation id="validator-constraint" value="LESSTHAN"/>
+    </property>
+    <property extractable="true" name="expirationDate" type="Date"/>
+    <property extractable="true" name="status" type="Status"/>
+    <property name="pmr" type="String"/>
+  </add-property>
+  <enum name="Status"/>
+  <enum name="Severity"/>
+</model:extension-model>

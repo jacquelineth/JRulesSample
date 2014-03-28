@@ -17,7 +17,7 @@ public Category category;
    
    //PMR87985
    public Phone firstAddedPhone;
-   public Phone lasstAddedPhone;
+   public Phone lastAddedPhone;
    
    public class Phone implements Serializable{
 	private static final long serialVersionUID = 1238621205366379211L;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+  <name value="IBM WebSphere AS 8.5 9088">  </name>
+  <url value="http://localhost:9088/testing">  </url>
+  <uuid value="_tbQw0KvMEeOs4fKdL3gJpw">  </uuid>
+  <type>IBM WebSphere AS 8.5</type>
+  <ssp-path>C:/IBM/ODM851/executionserver/applicationservers/WebSphere85/jrules-ssp-WAS85.ear</ssp-path>
+  <rts-path>C:/IBM/ODM851/teamserver/applicationservers/WebSphere85/jrules-teamserver-WAS85.ear</rts-path>
+</server>

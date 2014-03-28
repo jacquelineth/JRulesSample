@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DVS Project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>ilog.rules.studio.dvs.dvsProjectBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>ilog.rules.studio.dvs.sspCustomizationNature</nature>
+		<nature>ilog.rules.studio.dvs.sspFormatNature</nature>
+		<nature>ilog.rules.studio.dvs.dvsConfigurationNature</nature>
+	</natures>
+</projectDescription>

@@ -33,6 +33,13 @@ public class Customer
         extends java.io.Serializable
 {
 
+    public class CreditCard
+            extends java.io.Serializable
+    {
+        public string CCnumber;
+        public CreditCard(com.ibm.support.PMR.Customer arg);
+    }
+
     public class Phone
             extends java.io.Serializable
     {
@@ -45,7 +52,7 @@ public class Customer
     public java.util.ArrayList allCCs domain 0,* class com.ibm.support.PMR.Customer.CreditCard;
     public com.ibm.support.PMR.Category category;
     public com.ibm.support.PMR.Customer.Phone firstAddedPhone;
-    public com.ibm.support.PMR.Customer.Phone lasstAddedPhone;
+    public com.ibm.support.PMR.Customer.Phone lastAddedPhone;
     public string name;
     public Customer();
 }

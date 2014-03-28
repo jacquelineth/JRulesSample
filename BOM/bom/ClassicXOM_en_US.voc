@@ -18,6 +18,11 @@ com.ibm.support.PMR.Category.Silver#instance.label = Silver
 
 # com.ibm.support.PMR.Customer
 com.ibm.support.PMR.Customer#concept.label = customer
+
+# com.ibm.support.PMR.Customer.CreditCard
+com.ibm.support.PMR.Customer.CreditCard#concept.label = credit card
+com.ibm.support.PMR.Customer.CreditCard.CCnumber#phrase.action = set the CCnumber of {this} to {CCnumber}
+com.ibm.support.PMR.Customer.CreditCard.CCnumber#phrase.navigation = {CCnumber} of {this}
 com.ibm.support.PMR.Customer.CumulatedPurchase#phrase.action = set the cumulated purchase of {this} to {cumulated purchase}
 com.ibm.support.PMR.Customer.CumulatedPurchase#phrase.navigation = {cumulated purchase} of {this}
 
@@ -32,8 +37,8 @@ com.ibm.support.PMR.Customer.category#phrase.action = set the category of {this}
 com.ibm.support.PMR.Customer.category#phrase.navigation = {category} of {this}
 com.ibm.support.PMR.Customer.firstAddedPhone#phrase.action = set the first added phone of {this} to {first added phone}
 com.ibm.support.PMR.Customer.firstAddedPhone#phrase.navigation = {first added phone} of {this}
-com.ibm.support.PMR.Customer.lasstAddedPhone#phrase.action = set the lasst added phone of {this} to {lasst added phone}
-com.ibm.support.PMR.Customer.lasstAddedPhone#phrase.navigation = {lasst added phone} of {this}
+com.ibm.support.PMR.Customer.lastAddedPhone#phrase.action = set the last added phone of {this} to {last added phone}
+com.ibm.support.PMR.Customer.lastAddedPhone#phrase.navigation = {last added phone} of {this}
 com.ibm.support.PMR.Customer.name#phrase.action = set the name of {this} to {name}
 com.ibm.support.PMR.Customer.name#phrase.navigation = {name} of {this}
 
