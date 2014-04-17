@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Licensed Materials - Property of IBM                           -->
+<!-- 5725-B69 5655-Y17 5724-Y00 5724-Y17 5655-V84                                     -->
+<!-- Copyright IBM Corp. 1987, 2013. All Rights Reserved            -->
+<!-- US Government Users Restricted Rights - Use, duplication or    -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with        -->
+<!-- IBM Corp.                                                      -->
+
+
+<project name="How to Publish a Custom Value Editor" default="build" basedir=".">
+
+  <description>How to publish a custom value editor</description>
+
+  <property name="dc.home" location="${basedir}/../../.." />
+  <property name="teamserver.home" value="${dc.home}/teamserver"/>
+  <property file="${dc.home}/shared/samplesServer/was/build.properties"/>
+  <property file="${data.home}/was.properties"/>
+  <property name="server.url" value="http://${server.host}:${server.port}/teamserver" />
+  <property name="jrules.was.scripts.dir" value="${dc.home}/shared/samplesServer/was" />
+  <import file="${jrules.was.scripts.dir}/build.xml"/>
+
+  <import file="${teamserver.home}/lib/classpath-teamserver.xml"/>
+  <import file="${teamserver.home}/bin/build.xml"/>
+ 
+  <property name="src.dir" location="src"/>
+  <property name="build.dir" location="build"/>
+  <property name="webresources.dir" location="${build.dir}/webresources"/>
+  <property name="classes.dir" location="${build.dir}/classes"/>
+  <property name="teamserver.appli.name" value="jrules-teamserver-${application.server.name}.ear"/>
+  <property name="teamserver.appli.source" value="${teamserver.home}/applicationservers/sample/${teamserver.appli.name}"/>
+  <property name="teamserver.sample.dir" value="${teamserver.home}/applicationservers/sample" /> 
+  <property name="console" value="enterprise"/>
+
+  <!-- C L E A N -->
+  <target name="clean" description="Clean the built files">
+    <delete dir="${build.dir}" />
+  </target>
+
+  <!-- B U I L D -->
+  <target name="build" description="Compile the classes for the value editor" >
+    <mkdir dir="${classes.dir}"/>
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" nowarn="true" source="1.6" target="1.6" classpathref="teamserver.classpath" debug="true" fork="true" />
+    <mkdir dir="${build.dir}/lib" />
+    <jar destfile="${build.dir}/lib/servervalueeditor.jar" basedir="${classes.dir}" excludes="**/*Translator.class"/>
+    <jar destfile="${build.dir}/lib/servervaluetranslator.jar" basedir="${classes.dir}" includes="**/*Translator.class"/>
+  </target>
+
+ 
+  
+  <!-- R E P A C K A G E - W A R  -->
+ <target name="repack" depends="build" description="Rebuild a teamserver WAR corresponding to the new application">
+    <echo>Repackaging of the application...</echo>
+    <mkdir dir="${webresources.dir}/"/> 
+    <mkdir dir="${webresources.dir}/skins/classic/css"/>    
+                        <unzip src="${teamserver.sample.dir}/${teamserver.appli.name}" dest="${webresources.dir}">    
+                            <patternset>    
+                                <include name="skins/classic/css/main.css"/>
+                            </patternset>
+                        </unzip>
+        <concat destfile="${webresources.dir}/skins/classic/css/main.css" append="true">
+        .filterItems {
+         width: 340px;
+        }
+        </concat>
+        <mkdir dir="${webresources.dir}/skins/mozilla/css"/>    
+                            <unzip src="${teamserver.sample.dir}/${teamserver.appli.name}" dest="${webresources.dir}">    
+                                <patternset>    
+                                    <include name="skins/mozilla/css/main.css"/>
+                                </patternset>
+                            </unzip>
+            <concat destfile="${webresources.dir}/skins/mozilla/css/main.css" append="true">
+            .filterItems {
+             width: 340px;
+            }
+    </concat>
+    <mkdir dir="${webresources.dir}/WEB-INF/lib"/>
+    <copy file="${build.dir}/lib/servervalueeditor.jar" todir="${webresources.dir}/WEB-INF/lib"/>    
+    <repackage-ear
+      sourceEar="${teamserver.appli.source}"
+      targetEar="${build.dir}/${teamserver.appli.name}"
+      additionalJars="${build.dir}/lib/servervaluetranslator.jar"
+      webResourcesDir="${webresources.dir}"
+	  console="${console}">
+    </repackage-ear>
+  </target>  
+  
+
+  <!-- R U N -->
+  <target name="run" 
+    description="Set the parameter and deploy the new application"
+    depends="set-config-param, deploy ">
+  </target>
+
+
+  
+  <!-- S E T - C O N F I G - P A R A M -->
+  <target name="set-config-param" description="Set the teamserver property to call the value editor" >
+    <set-config-param
+      key="webui.editor.sample.myeditor.editor"
+      value="servervalueeditor.FilterValueEditor"
+      username="${rtsAdmin.login}"
+      password="${rtsAdmin.password}"
+      serverURL="${server.url}"
+      datasourceName="${db.dataSource}"
+      />
+  </target>
+
+  <!-- P R I N T - C O N F I G - P A R A M -->
+  <target name="print-config-param" description="Print the teamserver properties" >
+    <print-config-param
+      username="${rtsAdmin.login}"
+      password="${rtsAdmin.password}"
+      serverURL="${server.url}"
+      datasourceName="${db.dataSource}"
+      />
+  </target>
+
+  <!-- D E P L O Y -->
+  <target name="deploy" description="Deploy the custom WAR" >
+        <module.deploy name="rts" path="${build.dir}/${teamserver.appli.name}" />
+        <waitfor maxwait="10" maxwaitunit="minute" checkevery="2" checkeveryunit="second" timeoutproperty="deployment.time.out">
+           <http url="${server.url}/css/IlogStyle.css" />
+        </waitfor>
+        <fail message="Deployment timed out. Check your server status." if="deployment.time.out" />
+        <echo>Application ready. You can now sign in to Decision Center.</echo>
+  </target>  
+
+</project>
