@@ -105,6 +105,10 @@ com.ibm.support.PMR.Food.VegieSpread#instance.label = Vegie-spread
 com.ibm.support.PMR.Food.WimmersGuteSemmelknödel#instance.label = Wimmers gute Semmelknödel
 com.ibm.support.PMR.Food.ZaanseKoeken#instance.label = Zaanse koeken
 
+# com.ibm.support.PMR.Helper
+com.ibm.support.PMR.Helper#concept.label = helper
+com.ibm.support.PMR.Helper.ReadInput()#phrase.navigation = ReadInput
+
 # com.ibm.support.PMR.Portfolio
 com.ibm.support.PMR.Portfolio#concept.label = portfolio
 com.ibm.support.PMR.Portfolio.addSingleCustomer(com.ibm.support.PMR.Customer)#phrase.action = add {0} to the customers list  of {this}

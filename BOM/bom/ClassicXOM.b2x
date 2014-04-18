@@ -469,6 +469,19 @@
         </attribute>
     </class>
     <class>
+        <businessName>com.ibm.support.PMR.Helper</businessName>
+        <executionName>java.lang.Object</executionName>
+        <import>java.util.Scanner</import>
+        <method>
+            <name>ReadInput</name>
+            <body language="irl"><![CDATA[
+            //return System.console().readLine();
+  java.util.Scanner in = new  java.util.Scanner(System.in);
+return in.nextLine();
+            ]]></body>
+        </method>
+    </class>
+    <class>
         <businessName>com.ibm.support.PMR.Portfolio</businessName>
         <import>com.ibm.support.PMR.*</import>
         <import>com.ibm.support.PMR.Portfolio</import>
@@ -487,7 +500,7 @@ context.retract(c);
             Portfolio p=(Portfolio)context.getParameterValue("myMainportfolio");
 Store s=(Store)context.getParameterValue("Store");
 Portfolio p2=(Portfolio)context.getParameterValue("mySecondaryportfolio");
-System.err.print("\n\t Called virtual methods"+p+p2+"\n"+s);
+//System.err.print("\n\t Called virtual methods"+p+p2+"\n"+s);
 return p.customersList.contains(customer) || p2.customersList.contains(customer);
             ]]></body>
         </method>

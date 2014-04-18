@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>TestVariableSet</name>
+  <uuid>cbcccf95-6421-4b3a-8a44-ab7be2e22aba</uuid>
+  <variables name="controlCustomer" type="com.ibm.support.PMR.Customer" initialValue="" verbalization="Quality Control Customer"/>
+</ilog.rules.studio.model.base:VariableSet>
