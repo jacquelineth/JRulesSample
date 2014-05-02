@@ -1,0 +1,90 @@
+import com.ibm.support.PMR.Customer;
+import com.ibm.support.PMR.Category;
+import java.util.Calendar;
+import com.ibm.support.PMR.Product;
+
+
+flowtask mainRuleflow {
+  property mainflowtask = true;
+  property ilog.rules.business_name = "mainRuleflow";
+  property ilog.rules.package_name = "";
+  initialaction {
+    Exectime=System.currentTimeMillis();
+  };
+  finalaction {
+    Exectime=System.currentTimeMillis()-Exectime;
+    out.print("Temps :"+Exectime);
+
+  };
+  body {
+    mainRuleflow#initialisation;
+    mainRuleflow#task$_$0;
+    mainRuleflow#rulePackage;
+    mainRuleflow#task$_$3;
+  }
+};
+
+ruletask mainRuleflow#rulePackage {
+  property ilog.rules.business_name = "mainRuleflow>rulePackage";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    rulePackage.businessRule
+  }
+};
+
+functiontask mainRuleflow#initialisation {
+  property ilog.rules.business_name = "mainRuleflow>initialisation";
+  property ilog.rules.package_name = "";
+  initialaction {
+    mySecondaryportfolio.reverseCategory();
+    context.insert(myMainportfolio);
+    context.insert(mySecondaryportfolio);
+
+  };
+  body {
+    com.ibm.support.PMR.Customer c;
+    Category [] CategoryValues=Category.values();
+    int CategorySize= CategoryValues.length;
+    for (int j=0; j<CategorySize;j++){
+    	Category cat=CategoryValues[j];
+    	for ( short i=0; i<counter;i++){
+    		c=new com.ibm.support.PMR.Customer();
+    		c.category= cat;
+    		c.name= cat.toString()+String.valueOf(i);
+    	
+    		c.CumulatedPurchase=(int)(Math.random()*1000);
+    		context.insert(c);
+    	}
+    }
+
+  }
+};
+
+ruletask mainRuleflow#task$_$0 {
+  property ilog.rules.business_name = "mainRuleflow>task_0";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    rulePackage.Sales
+  }
+};
+
+ruletask mainRuleflow#task$_$3 {
+  property ilog.rules.business_name = "mainRuleflow>task_3";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  initialaction {
+    insert Store;
+  };
+  finalaction {
+    context.retract(Store);
+  };
+  body {
+    taxes.*
+  }
+};
+
