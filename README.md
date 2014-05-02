@@ -1,12 +1,12 @@
-###JRulesSample
+##JRulesSample
 ============
 
-Basic **JRules** Samples, each branch contained the same sample modified to illustrate  a feature or a version, sometime a common request.
+Basic **JRules** Samples, each branch contains the same sample modified to illustrate a feature or a version.
 
 - Based on Rule Designer.
 - Basic rules (2 rules , 1 Decision Table, 1 ruleflow)
-  - Flow task initial task populate working memory
-
+  - initial flow  task populates working memory
+  - The purpose is to randomly affect purchases to customer from stores 
 
 You must have Rule Designer installed.
 
