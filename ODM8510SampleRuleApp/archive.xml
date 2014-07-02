@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleapp-archive xsi:noNamespaceSchemaLocation="http://schemas.ilog.com/JRules/1.2/RuleAppArchive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ruleapp>
+    <ruleapp-display-name>ODM8510SampleRuleApp</ruleapp-display-name>
+    <ruleapp-name>ODM8510SampleRuleApp</ruleapp-name>
+    <ruleapp-version>1.0</ruleapp-version>
+    <creation-date>1404249711590</creation-date>
+    <ruleset>
+      <ruleset-display-name>Rules</ruleset-display-name>
+      <ruleset-name>Rules</ruleset-name>
+      <ruleset-version>1.0</ruleset-version>
+      <creation-date>1404249711985</creation-date>
+      <ruleset-property>
+        <ruleset-property-name>ruleset.debug.enabled</ruleset-property-name>
+        <ruleset-property-value>true</ruleset-property-value>
+      </ruleset-property>
+      <ruleset-property>
+        <ruleset-property-name>ruleset.bom.enabled</ruleset-property-name>
+        <ruleset-property-value>true</ruleset-property-value>
+      </ruleset-property>
+      <ruleset-property>
+        <ruleset-property-name>ruleset.trace.enabled</ruleset-property-name>
+        <ruleset-property-value>true</ruleset-property-value>
+      </ruleset-property>
+      <ruleset-property>
+        <ruleset-property-name>monitoring.enabled</ruleset-property-name>
+        <ruleset-property-value>true</ruleset-property-value>
+      </ruleset-property>
+    </ruleset>
+  </ruleapp>
+</ruleapp-archive>

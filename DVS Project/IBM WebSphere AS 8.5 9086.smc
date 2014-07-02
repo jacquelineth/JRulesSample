@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server>
-  <name value="IBM WebSphere AS 8.5 9088">  </name>
+  <name value="IBM WebSphere AS 8.5 9086">  </name>
   <url value="http://localhost:9082/testing">  </url>
   <uuid value="_tbQw0KvMEeOs4fKdL3gJpw">  </uuid>
   <type>IBM WebSphere AS 8.5</type>

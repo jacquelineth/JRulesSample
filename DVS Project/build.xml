@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="dvs-project" default="repackage-ssp" basedir=".">
+	<property name="ibm.ds.home" location="C:/IBM/ODM851" />
+	<property name="eclipse.workspace.dir" location="C:/Cases/JRules/Sample" />
+	<property name="executionserver.home" value="${ibm.ds.home}/executionserver" />        	
+    <property name="dvs.home" value="${ibm.ds.home}/executionserver" />
+    <property name="dvs.plugin" value="C:/IBM/WODM80/WAS/AppServer-Shared/plugins/ilog.rules.studio.dvs_8.5.1.0-20131029_1745" />
+    <property name="ssp.in" value="${dvs.home}/applicationservers/WebSphere85/jrules-ssp-WAS85.ear" />
+    <property name="ssp.out.dir" value="${basedir}/applicationservers/WebSphere85" />
+    <property name="ssp.out" value="${ssp.out.dir}/jrules-ssp-WAS85.ear" />
+  	
+  	<import file="${executionserver.home}/lib/classpath-executionserver.xml" optional="true"/>
+  	<target name="init-res">
+	    <taskdef resource="res-tasks.properties" >
+	    	<classpath refid="executionserver.setup.classpath"/>
+	  	</taskdef> 	
+  	</target>
+  	
+  	<!-- Repackage SSP -->
+    <target name="repackage-ssp" depends="init-res">
+    	<mkdir dir="${ssp.out.dir}" />
+        <ssp-setup 
+        	sspInput="${ssp.in}"
+        	sspOutput="${ssp.out}"
+        	verbose="true">
+        	        	<xomClasses >
+        	        	        	<!-- XOM -->
+        		        		<fileset dir="${eclipse.workspace.dir}/ClassicXOM/bin" />
+        		        	        	        	</xomClasses>        	        	
+        	        	    	</ssp-setup>
+	</target>
+
+	
+	<path id="teamserver-ant-tasks.classpath">
+	   <fileset dir="${dvs.plugin}/lib">
+	      <include name="jrules-teamserver.jar" />
+	   </fileset>
+	</path>
+	<target name="init-rts">
+		<taskdef name="repackage-Ear" classname="ilog.rules.teamserver.ant.IlrRepackageEarTask">
+			<classpath refid="teamserver-ant-tasks.classpath"/>
+		</taskdef>
+		<taskdef name="repackage-War" classname="ilog.rules.teamserver.ant.IlrRepackageWarTask">
+			<classpath refid="teamserver-ant-tasks.classpath"/>
+		</taskdef>
+	</target>
+	        
+	<!-- Repackage RTS  -->
+	<target name="repackage-rts" depends="init-rts">
+		<!-- copy files in rts-webresources before repackaging -->  
+		<mkdir dir="${basedir}/rts-webresources"/>
+		<property name="fail" value="false" />
+				<copy file="rts-bin/messages.properties" tofile="rts-webresources/WEB-INF/classes/ilog/rules/teamserver/messages.properties" failonerror="${fail}"/>
+				<copy file="rts-bin/preferences.properties" tofile="rts-webresources/WEB-INF/classes/ilog/rules/preferences.properties" failonerror="${fail}"/>
+				
+		<!-- repackage the teamserver file --> 
+		<property name="teamserver.out.dir" value="${basedir}/applicationservers/WebSphere85" />
+		<mkdir dir="${teamserver.out.dir}" />
+    	<repackage-Ear
+	    	sourceEar="C:/IBM/ODM851/teamserver/applicationservers/WebSphere85/jrules-teamserver-WAS85.ear"
+	      	targetEar="${teamserver.out.dir}/jrules-teamserver-WAS85.ear"
+	      	webResourcesDir="${basedir}/rts-webresources"/>
+	</target>
+
+	  <!-- Update RTS with new renderers and messages -->
+	<target name="update-rts">
+	   <!-- Target kept for compatibility.  Configuration of Decision Center is now included in the repackaged EARs. -->
+	</target>
+</project>
