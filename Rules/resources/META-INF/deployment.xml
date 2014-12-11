@@ -19,4 +19,9 @@
             <uri value="resuri://ClassicXOM.zip/1.0"/>
         </xom>
     </config>
+<config serverURL="http://localhost:9086/res">
+        <xom>
+            <uri value="resuri://ClassicXOM.zip/3.0"/>
+        </xom>
+    </config>
 </project-deployment>

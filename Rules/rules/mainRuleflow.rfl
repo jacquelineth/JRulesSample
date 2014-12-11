@@ -12,6 +12,8 @@
         <Actions Language="irl"><![CDATA[Exectime=System.currentTimeMillis();]]></Actions>
       </StartTask>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="rulePackage" Ordering="Literal">
+        <InitialActions Language="bal"><![CDATA[print "\n\n\t\tTASK : Rule Execution\n\n\n";]]></InitialActions>
+        <Select Dynamic="false" Language="bal"><![CDATA[the effective date of 'the rule' is after extractorParam ]]></Select>
         <RuleList>
           <Rule Uuid="4ef1094a-5b07-4ca9-b8a5-b7838e429ca8"/>
         </RuleList>
@@ -36,7 +38,8 @@ for (int j=0; j<CategorySize;j++){
 	}
 }]]></Actions>
       </ActionTask>
-      <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_0" Ordering="Default">
+      <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_0" Ordering="Priority">
+        <FinalActions Language="bal"><![CDATA[print "out of Sales' task" ;]]></FinalActions>
         <RuleList>
           <Rule Uuid="0869355c-49cb-4958-abcd-03bd75e4737e"/>
           <Package Name="level1.level2"/>
@@ -45,7 +48,8 @@ for (int j=0; j<CategorySize;j++){
         </RuleList>
       </RuleTask>
       <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_3" Ordering="Default">
-        <InitialActions Language="irl"><![CDATA[insert Store;]]></InitialActions>
+        <InitialActions Language="irl"><![CDATA[insert Store;]]>&#13;<![CDATA[
+System.out.println("\n\n\n\t\t TASK:  Taxes\n\n");]]></InitialActions>
         <FinalActions Language="irl"><![CDATA[context.retract(Store);]]></FinalActions>
         <RuleList>
           <Package Name="taxes"/>
@@ -53,7 +57,8 @@ for (int j=0; j<CategorySize;j++){
       </RuleTask>
       <StopTask Identifier="task_2">
         <Actions Language="irl"><![CDATA[Exectime=System.currentTimeMillis()-Exectime;
-note("Temps :"+Exectime);]]></Actions>
+note("Temps :"+Exectime);
+System.out.println("End Task");]]></Actions>
       </StopTask>
     </TaskList>
     <NodeList>
@@ -70,44 +75,50 @@ note("Temps :"+Exectime);]]></Actions>
       <Transition Identifier="transition_4" Source="node_4" Target="node_3"/>
       <Transition Identifier="transition_0" Source="node_3" Target="node_2"/>
       <Transition Identifier="transition_2" Source="node_2" Target="node_5"/>
+      <Transition Identifier="transition_5" Source="node_3" Target="node_1">
+        <Conditions Language="bal"><![CDATA['Exit Ruleflow switch' is true  ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_2" Target="node_1">
+        <Conditions Language="bal"><![CDATA['Exit Ruleflow switch' is true]]></Conditions>
+      </Transition>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_5#height">40.0</Data>
       <Data Name="node_3#height">40.0</Data>
-      <Data Name="node_1#height">22.0</Data>
-      <Data Name="node_4#name">node_3</Data>
-      <Data Name="node_2#name">node_2</Data>
-      <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_2#label">rules execution</Data>
-      <Data Name="node_3#label">Sales</Data>
-      <Data Name="node_0#x">54.354492</Data>
-      <Data Name="node_4#label">Init Task</Data>
-      <Data Name="node_5#label">Taxes</Data>
-      <Data Name="node_1#x">56.15448</Data>
-      <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_2#x">54.354492</Data>
-      <Data Name="node_1#y">276.40234</Data>
-      <Data Name="node_2#y">194.40234</Data>
-      <Data Name="node_3#x">-103.0</Data>
-      <Data Name="node_3#y">166.0</Data>
-      <Data Name="node_4#x">52.354492</Data>
-      <Data Name="node_5#x">197.0</Data>
-      <Data Name="node_4#y">99.70117</Data>
-      <Data Name="node_5#y">184.0</Data>
-      <Data Name="node_4#height">53.402344</Data>
-      <Data Name="node_2#height">40.0</Data>
-      <Data Name="node_5#name">node_1</Data>
-      <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_1#width">22.000004</Data>
+      <Data Name="node_2#height">53.402344</Data>
       <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_3#name">node_1</Data>
-      <Data Name="node_2#width">108.708984</Data>
+      <Data Name="node_4#x">54.68327</Data>
+      <Data Name="node_4#name">node_3</Data>
+      <Data Name="node_4#y">97.70117</Data>
+      <Data Name="node_3#y">219.40234</Data>
       <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_2#label">rules execution</Data>
+      <Data Name="node_3#name">node_1</Data>
       <Data Name="node_1#name">node_1</Data>
-      <Data Name="node_4#width">104.0332</Data>
+      <Data Name="node_4#label">Init Task</Data>
+      <Data Name="node_3#x">22.016602</Data>
+      <Data Name="node_1#width">20.000002</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_5#height">40.0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_2#width">108.709</Data>
       <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_5#label">Taxes</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_3#label">Sales</Data>
+      <Data Name="node_0#x">52.0166</Data>
+      <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_1#x">-23.483398</Data>
+      <Data Name="node_4#width">104.0332</Data>
+      <Data Name="node_1#y">485.8047</Data>
+      <Data Name="node_1#height">20.0</Data>
+      <Data Name="node_2#x">63.693954</Data>
+      <Data Name="node_2#y">310.77017</Data>
+      <Data Name="node_5#y">436.47134</Data>
+      <Data Name="node_5#x">228.85</Data>
     </ResourceSet>
   </Resources>
   <Properties>

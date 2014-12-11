@@ -173,3 +173,7 @@ com.ibm.support.PMR.Store.legalStockValue#phrase.navigation = {legal stock value
 com.ibm.support.PMR.Tax#concept.label = TAX
 com.ibm.support.PMR.Tax.computeEuroVAT(java.lang.Double)#phrase.navigation = EuroVAT of {0}
 com.ibm.support.PMR.Tax.computeLocalTAX(double)#phrase.navigation = with LocalTAX on {0}
+
+# com.ibm.support.logging.Tracer
+com.ibm.support.logging.Tracer#concept.label = tracer
+com.ibm.support.logging.Tracer.traceRule()#phrase.action = trace rule

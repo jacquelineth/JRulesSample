@@ -2,6 +2,8 @@
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
   <name>PMR87895_corrected</name>
   <uuid>c5407bfb-4bf5-4ac1-9126-3d65907c3902</uuid>
+  <documentation><![CDATA[set 'Exit Ruleflow switch' to true ;  //used to control ruleflow exit]]></documentation>
+  <priority>100</priority>
   <locale>en_US</locale>
   <definition><![CDATA[definitions 
 	set 'variable1' to a customer;
@@ -9,5 +11,6 @@ if any of the following conditions is true :
 		- the first added phone of variable1 is untrusted 
 		- the last added phone of variable1 is untrusted 
 		and there are more than 0 credit cards  in the all CCs of variable1 ,
-then print "Correct Rule matched" ; ]]></definition>
+then print "Correct Rule matched PMR87895_corrected" ; 
+trace rule ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

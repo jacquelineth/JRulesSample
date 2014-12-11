@@ -9,4 +9,6 @@
 if 
 	 the category of client is a category of listing and it is not true that  client is enlisted in listing 
 then add client to the customers list of listing ; print the name of client + " processed";]]></definition>
+  <effectiveDate>2014-09-30T00:00:00.000+0200</effectiveDate>
+  <expirationDate>2014-09-24T00:00:00.000+0200</expirationDate>
 </ilog.rules.studio.model.brl:ActionRule>

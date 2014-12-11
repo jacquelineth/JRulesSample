@@ -22,6 +22,7 @@
   <parameters name="mySecondaryportfolio" type="com.ibm.support.PMR.Portfolio" initialValue="new com.ibm.support.PMR.Portfolio()" verbalization="Secondary" direction="IN_OUT"/>
   <parameters name="counter" type="short" initialValue="50" verbalization="Customercounter"/>
   <parameters name="Exectime" type="long" initialValue="0" verbalization="Execution time" direction="OUT"/>
+  <parameters name="myExtractorParam" type="java.util.Date" initialValue="new java.util.Date()" verbalization="extractorParam"/>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
   </modelFolders>

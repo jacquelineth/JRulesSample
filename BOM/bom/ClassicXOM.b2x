@@ -511,6 +511,12 @@ context.insert(c);
             return new Integer(this.computedValue);
             ]]></getter>
         </attribute>
+        <method>
+            <name>testLegalDifference</name>
+            <body language="irl"><![CDATA[
+            return (float) (this.legalStockValue - this.computedValue);
+            ]]></body>
+        </method>
     </class>
     <class>
         <businessName>com.ibm.support.PMR.Tax</businessName>
@@ -527,6 +533,25 @@ context.insert(c);
             <parameter type="double"/>
             <body language="irl"><![CDATA[
             return paid*1.10d;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.ibm.support.logging.Tracer</businessName>
+        <executionName>java.lang.Object</executionName>
+        <method>
+            <name>traceRule</name>
+            <body language="irl"><![CDATA[
+            java.util.Enumeration  e= instance.rule.properties.elements();
+while( e.hasMoreElements()){
+	 ilog.rules.factory.IlrPropertyList.Entry entry = (ilog.rules.factory.IlrPropertyList.Entry)e.nextElement();
+				         System.out.println(entry.getKey()+"=>"+entry.getValue());
+}
+
+//ilog.rules.engine.base.IlrRtConstantValue rt = instance.rule.getPriority() ;
+
+
+ System.out.println("Priority =>"+instance.getPriority());
             ]]></body>
         </method>
     </class>
