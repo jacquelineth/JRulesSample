@@ -35,4 +35,11 @@ public Category category;
 	   public String CCnumber;
 	   //public java.util.Date expirationDate;
    }
+   
+ 
+   @Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return "{"+this.getClass().getName()+"{ name:"+name+", Category:"+this.category.toString()+", Purchases:"+CumulatedPurchase +" }" ;
+}
 }
