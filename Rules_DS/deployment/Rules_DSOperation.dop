@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="Rules_DSRuleset" usingRuleflow="true" ruleflowName="mainRuleflow" targetRuleProjectName="Rules_DS">
+  <name>Rules_DSOperation</name>
+  <uuid>db650e48-a137-40e0-b4aa-e0aa223e8c11</uuid>
+  <referencedVariables variableName="Store" variableSetName="BOM_DSParameters" direction="OUT">
+    <variableSet href="../../BOM_DS/rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="myMainportfolio" variableSetName="BOM_DSParameters" direction="IN_OUT">
+    <variableSet href="../../BOM_DS/rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="mySecondaryportfolio" variableSetName="BOM_DSParameters" direction="IN_OUT">
+    <variableSet href="../../BOM_DS/rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="counter" variableSetName="BOM_DSParameters">
+    <variableSet href="../../BOM_DS/rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="Exectime" variableSetName="BOM_DSParameters" direction="OUT">
+    <variableSet href="../../BOM_DS/rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="myExtractorParam" variableSetName="BOM_DSParameters">
+    <variableSet href="../../BOM_DS/rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <ruleflow href="../rules/mainRuleflow.rfl#596e9730-d2d3-48f2-b04d-33537debc669"/>
+  <targetRuleProject href="../../Rules_DS#1b1c309d-df7d-488b-a281-5536e71aa08d"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

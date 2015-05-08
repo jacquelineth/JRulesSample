@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<report xmlns="http://schemas.ibm.com/odm/decisionservice/report/1.0" name="Rule Project Migration - BOM_DS">
+  <section name="Migration initialization">
+    <event name="Checking migration prerequisites" severity="information" timestamp="1431074874257"></event>
+    <event name="No major issues detected." severity="information" timestamp="1431074874288"></event>
+    <event name="Collecting migration actions" severity="information" timestamp="1431074874288"></event>
+    <event name="Performing migration actions" severity="information" timestamp="1431074874288"></event>
+    <event name="Suspend workspace auto build" severity="information" timestamp="1431074874288"></event>
+  </section>
+  <section name="Performing migration actions on decision operations for project 'BOM_DS'">
+    <event name="Setting project as standard rule project for decision service" severity="information" timestamp="1431074874288"></event>
+    <event name="Creating VariableSet &quot;BOM_DSParameters&quot;" severity="information" timestamp="1431074874288"></event>
+    <event name="Creating decision operation &quot;BOM_DSOperation&quot;" severity="information" timestamp="1431074874288"></event>
+    <event name="Saving element &quot;BOM_DSParameters&quot;" severity="information" timestamp="1431074874288"></event>
+    <event name="Saving element &quot;BOM_DSOperation&quot;" severity="information" timestamp="1431074874288"></event>
+    <event name="Updating project &quot;BOM_DS&quot; to support decision operations" severity="information" timestamp="1431074874288"></event>
+    <event name="Ruleset parameters definition has been removed from rule project" severity="warning" timestamp="1431074874289"></event>
+  </section>
+  <section name="Migration done"></section>
+</report>

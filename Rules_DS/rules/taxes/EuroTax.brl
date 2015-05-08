@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>EuroTax</name>
+  <uuid>ae87f063-52b2-486e-b537-0ee83021ed4f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'variable1' to a store ; 
+then set the legal stock value of variable1 to EuroVAT of the computed integer of variable1 ; 
+print "Applied EU taxes: "+  EuroVAT of the computed integer of variable1;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="pmr" value="50244,442,000"/>
+    <details key="severity" value="3"/>
+  </eAnnotations>
+  <name>Food Action Rule</name>
+  <uuid>1e491d8b-4f51-43e8-a4c7-5e743c7c873e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+	set 'articles' to all sellable articles;
+then
+	for each sellable article called 'variable1' , in articles :
+		- set the price of variable1 to 3 
+		- print the name of variable1
+		- print the name of this rule ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

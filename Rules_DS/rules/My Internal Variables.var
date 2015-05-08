@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>My Internal Variables</name>
+  <uuid>472e469b-4b97-4c0d-9051-7b5281fccd7d</uuid>
+  <variables name="exitRuleFlow" type="boolean" initialValue="false" verbalization="Exit Ruleflow switch"/>
+</ilog.rules.studio.model.base:VariableSet>

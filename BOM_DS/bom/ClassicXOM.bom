@@ -1,0 +1,384 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/BOM//ClassicXOM"
+property uuid "ef948bfb-7224-4261-adcb-c3d531e61ac2"
+package com.ibm.support.PMR;
+
+
+public interface Article
+{
+    public readonly abstract int price;
+    public com.ibm.support.PMR.Article getAffordableArticle(int arg);
+}
+
+public final class Category
+        extends java.lang.Enum
+{
+    domain {static Centurion, static Platinum, static Gold, static Silver, static Exclusive, static Business, static Express, static Distinguished}
+    public static final readonly com.ibm.support.PMR.Category Business
+                property categories "MiddeClass,Rich";
+    public static final readonly com.ibm.support.PMR.Category Centurion;
+    public static final readonly com.ibm.support.PMR.Category Distinguished;
+    public static final readonly com.ibm.support.PMR.Category Exclusive;
+    public static final readonly com.ibm.support.PMR.Category Express;
+    public static final readonly com.ibm.support.PMR.Category Gold;
+    public static final readonly com.ibm.support.PMR.Category Platinum;
+    public static final readonly com.ibm.support.PMR.Category Silver;
+    public string toString();
+    public static com.ibm.support.PMR.Category valueOf(string arg);
+    public static com.ibm.support.PMR.Category[] values();
+}
+
+public class Customer
+        extends java.io.Serializable
+{
+
+    public class CreditCard
+            extends java.io.Serializable
+    {
+        public string CCnumber;
+        public CreditCard(com.ibm.support.PMR.Customer arg);
+    }
+
+    public class Phone
+            extends java.io.Serializable
+    {
+        public string content;
+        public readonly boolean untrusted;
+        public Phone(com.ibm.support.PMR.Customer arg);
+    }
+    public int CumulatedPurchase
+                property update "true";
+    public java.util.ArrayList allCCs domain 0,* class com.ibm.support.PMR.Customer.CreditCard;
+    public com.ibm.support.PMR.Category category;
+    public com.ibm.support.PMR.Customer.Phone firstAddedPhone;
+    public com.ibm.support.PMR.Customer.Phone lastAddedPhone;
+    public string name;
+    public Customer();
+    public string toString();
+}
+
+public class Food
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "2"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "1"
+        property "com.ibm.rules.domainProvider.msexcel.properties.price" "3"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "NorthwindProduct.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static Chai,
+        static Chang,
+        static Aniseed_Syrup,
+        static ChefAntonCajunSeasoning,
+        static ChefAntonGumboMix,
+        static GrandmaBoysenberrySpread,
+        static UncleBobOrganicDriedPears,
+        static NorthwoodsCranberrySauce,
+        static MishiKobeNiku,
+        static Ikura,
+        static QuesoCabrales,
+        static QuesoManchegoLaPastora,
+        static Konbu,
+        static Tofu,
+        static GenenShouyu,
+        static Pavlova,
+        static AliceMutton,
+        static CarnarvonTigers,
+        static TeatimeChocolateBiscuits,
+        static SirRodneyMarmalade,
+        static SirRodneyScones,
+        static GustafKnäckebröd,
+        static Tunnbröd,
+        static GuaranáFantástica,
+        static NuNuCaNußNougatCreme,
+        static GumbärGummibärchen,
+        static SchoggiSchokolade,
+        static RössleSauerkraut,
+        static ThüringerRostbratwurst,
+        static NordOstMatjeshering,
+        static GorgonzolaTelino,
+        static MascarponeFabioli,
+        static Geitost,
+        static SasquatchAle,
+        static SteeleyeStout,
+        static InlagdSill,
+        static GravadLax,
+        static CôteDeBlaye,
+        static ChartreuseVerte,
+        static BostonCrabMeat,
+        static JackNewEnglandClamChowder,
+        static SingaporeanHokkienFriedMee,
+        static IpohCoffee,
+        static GulaMalacca,
+        static RogedeSild,
+        static Spegesild,
+        static ZaanseKoeken,
+        static Chocolade,
+        static Maxilaku,
+        static ValkoinenSuklaa,
+        static ManjimupDriedApples,
+        static FiloMix,
+        static PerthPasties,
+        static Tourtière,
+        static PâtéChinois,
+        static GnocchiDiNonnaAlice,
+        static RavioliAngelo,
+        static EscargotsDeBourgogne,
+        static RacletteCourdavault,
+        static CamembertPierrot,
+        static SiropDErable,
+        static TarteAuSucre,
+        static VegieSpread,
+        static WimmersGuteSemmelknödel,
+        static LouisianaFieryHotPepperSauce,
+        static LouisianaHotSpicedOkra,
+        static LaughingLumberjackLager,
+        static ScottishLongbreads,
+        static Gudbrandsdalsost,
+        static OutbackLager,
+        static Flotemysost,
+        static MozzarellaDiGiovanni,
+        static RödKaviar,
+        static LonglifeTofu,
+        static RhönbräuKlosterbier,
+        static Lakkalikööri,
+        static OriginalFrankfurterGrüneSoße
+    }
+    public static final readonly com.ibm.support.PMR.Food AliceMutton
+                property price "39";
+    public static final readonly com.ibm.support.PMR.Food Aniseed_Syrup
+                property price "10";
+    public static final readonly com.ibm.support.PMR.Food BostonCrabMeat
+                property price "19";
+    public static final readonly com.ibm.support.PMR.Food CamembertPierrot
+                property price "34";
+    public static final readonly com.ibm.support.PMR.Food CarnarvonTigers
+                property price "63";
+    public static final readonly com.ibm.support.PMR.Food Chai
+                property price "18";
+    public static final readonly com.ibm.support.PMR.Food Chang
+                property price "19";
+    public static final readonly com.ibm.support.PMR.Food ChartreuseVerte
+                property price "18";
+    public static final readonly com.ibm.support.PMR.Food ChefAntonCajunSeasoning
+                property price "22";
+    public static final readonly com.ibm.support.PMR.Food ChefAntonGumboMix
+                property price "21";
+    public static final readonly com.ibm.support.PMR.Food Chocolade
+                property price "13";
+    public static final readonly com.ibm.support.PMR.Food CôteDeBlaye
+                property price "263";
+    public static final readonly com.ibm.support.PMR.Food EscargotsDeBourgogne
+                property price "13";
+    public static final readonly com.ibm.support.PMR.Food FiloMix
+                property price "7";
+    public static final readonly com.ibm.support.PMR.Food Flotemysost
+                property price "22";
+    public static final readonly com.ibm.support.PMR.Food Geitost
+                property price "3";
+    public static final readonly com.ibm.support.PMR.Food GenenShouyu
+                property price "16";
+    public static final readonly com.ibm.support.PMR.Food GnocchiDiNonnaAlice
+                property price "38";
+    public static final readonly com.ibm.support.PMR.Food GorgonzolaTelino
+                property price "15";
+    public static final readonly com.ibm.support.PMR.Food GrandmaBoysenberrySpread
+                property price "25";
+    public static final readonly com.ibm.support.PMR.Food GravadLax
+                property price "26";
+    public static final readonly com.ibm.support.PMR.Food GuaranáFantástica
+                property price "5";
+    public static final readonly com.ibm.support.PMR.Food Gudbrandsdalsost
+                property price "36";
+    public static final readonly com.ibm.support.PMR.Food GulaMalacca
+                property price "20";
+    public static final readonly com.ibm.support.PMR.Food GumbärGummibärchen
+                property price "32";
+    public static final readonly com.ibm.support.PMR.Food GustafKnäckebröd
+                property price "21";
+    public static final readonly com.ibm.support.PMR.Food Ikura
+                property price "31";
+    public static final readonly com.ibm.support.PMR.Food InlagdSill
+                property price "19";
+    public static final readonly com.ibm.support.PMR.Food IpohCoffee
+                property price "46";
+    public static final readonly com.ibm.support.PMR.Food JackNewEnglandClamChowder
+                property price "10";
+    public static final readonly com.ibm.support.PMR.Food Konbu
+                property price "6";
+    public static final readonly com.ibm.support.PMR.Food Lakkalikööri
+                property price "18";
+    public static final readonly com.ibm.support.PMR.Food LaughingLumberjackLager
+                property price "14";
+    public static final readonly com.ibm.support.PMR.Food LonglifeTofu
+                property price "10";
+    public static final readonly com.ibm.support.PMR.Food LouisianaFieryHotPepperSauce
+                property price "21";
+    public static final readonly com.ibm.support.PMR.Food LouisianaHotSpicedOkra
+                property price "17";
+    public static final readonly com.ibm.support.PMR.Food ManjimupDriedApples
+                property price "53";
+    public static final readonly com.ibm.support.PMR.Food MascarponeFabioli
+                property price "32";
+    public static final readonly com.ibm.support.PMR.Food Maxilaku
+                property price "20";
+    public static final readonly com.ibm.support.PMR.Food MishiKobeNiku
+                property price "97";
+    public static final readonly com.ibm.support.PMR.Food MozzarellaDiGiovanni
+                property price "35";
+    public static final readonly com.ibm.support.PMR.Food NordOstMatjeshering
+                property price "26";
+    public static final readonly com.ibm.support.PMR.Food NorthwoodsCranberrySauce
+                property price "40";
+    public static final readonly com.ibm.support.PMR.Food NuNuCaNußNougatCreme
+                property price "14";
+    public static final readonly com.ibm.support.PMR.Food OriginalFrankfurterGrüneSoße
+                property price "13";
+    public static final readonly com.ibm.support.PMR.Food OutbackLager
+                property price "15";
+    public static final readonly com.ibm.support.PMR.Food Pavlova
+                property price "18";
+    public static final readonly com.ibm.support.PMR.Food PerthPasties
+                property price "32";
+    public static final readonly com.ibm.support.PMR.Food PâtéChinois
+                property price "24";
+    public static final readonly com.ibm.support.PMR.Food QuesoCabrales
+                property price "21";
+    public static final readonly com.ibm.support.PMR.Food QuesoManchegoLaPastora
+                property price "38";
+    public static final readonly com.ibm.support.PMR.Food RacletteCourdavault
+                property price "55";
+    public static final readonly com.ibm.support.PMR.Food RavioliAngelo
+                property price "20";
+    public static final readonly com.ibm.support.PMR.Food RhönbräuKlosterbier
+                property price "8";
+    public static final readonly com.ibm.support.PMR.Food RogedeSild
+                property price "10";
+    public static final readonly com.ibm.support.PMR.Food RödKaviar
+                property price "15";
+    public static final readonly com.ibm.support.PMR.Food RössleSauerkraut
+                property price "46";
+    public static final readonly com.ibm.support.PMR.Food SasquatchAle
+                property price "14";
+    public static final readonly com.ibm.support.PMR.Food SchoggiSchokolade
+                property price "44";
+    public static final readonly com.ibm.support.PMR.Food ScottishLongbreads
+                property price "13";
+    public static final readonly com.ibm.support.PMR.Food SingaporeanHokkienFriedMee
+                property price "14";
+    public static final readonly com.ibm.support.PMR.Food SirRodneyMarmalade
+                property price "81";
+    public static final readonly com.ibm.support.PMR.Food SirRodneyScones
+                property price "10";
+    public static final readonly com.ibm.support.PMR.Food SiropDErable
+                property price "29";
+    public static final readonly com.ibm.support.PMR.Food Spegesild
+                property price "12";
+    public static final readonly com.ibm.support.PMR.Food SteeleyeStout
+                property price "18";
+    public static final readonly com.ibm.support.PMR.Food TarteAuSucre
+                property price "50";
+    public static final readonly com.ibm.support.PMR.Food TeatimeChocolateBiscuits
+                property price "9";
+    public static final readonly com.ibm.support.PMR.Food ThüringerRostbratwurst
+                property price "124";
+    public static final readonly com.ibm.support.PMR.Food Tofu
+                property price "23";
+    public static final readonly com.ibm.support.PMR.Food Tourtière
+                property price "7";
+    public static final readonly com.ibm.support.PMR.Food Tunnbröd
+                property price "9";
+    public static final readonly com.ibm.support.PMR.Food UncleBobOrganicDriedPears
+                property price "30";
+    public static final readonly com.ibm.support.PMR.Food ValkoinenSuklaa
+                property price "17";
+    public static final readonly com.ibm.support.PMR.Food VegieSpread
+                property price "44";
+    public static final readonly com.ibm.support.PMR.Food WimmersGuteSemmelknödel
+                property price "33";
+    public static final readonly com.ibm.support.PMR.Food ZaanseKoeken
+                property price "9.5";
+}
+
+public class Portfolio
+        extends java.io.Serializable
+{
+    public readonly java.util.EnumSet categories domain 0,* class com.ibm.support.PMR.Category;
+    public java.util.Vector customersList domain 0,* class com.ibm.support.PMR.Customer;
+    public Portfolio();
+    public void addSingleCustomer(com.ibm.support.PMR.Customer c);
+    public boolean checkListed(com.ibm.support.PMR.Customer customer);
+    public boolean containsCategory(com.ibm.support.PMR.Category arg);
+    public void removeSingleCustomer(com.ibm.support.PMR.Customer c);
+    public void reverseCategory();
+    public string toString();
+}
+
+public final class Product
+        extends java.lang.Enum
+        implements com.ibm.support.PMR.Article
+{
+    domain {static Cola, static Bread, static Burger, static CD, static DVD, static USBkey, static Mouse, static Game, static LavaLamp, static Laptop, static Monitor, static Phone}
+    public static final readonly com.ibm.support.PMR.Product Bread;
+    public static final readonly com.ibm.support.PMR.Product Burger;
+    public static final readonly com.ibm.support.PMR.Product CD;
+    public static final readonly com.ibm.support.PMR.Product Cola;
+    public static final readonly com.ibm.support.PMR.Product DVD;
+    public static final readonly com.ibm.support.PMR.Product Game;
+    public static final readonly com.ibm.support.PMR.Product Laptop;
+    public static final readonly com.ibm.support.PMR.Product LavaLamp;
+    public static final readonly com.ibm.support.PMR.Product Monitor;
+    public static final readonly com.ibm.support.PMR.Product Mouse;
+    public static final readonly com.ibm.support.PMR.Product Phone;
+    public static final readonly com.ibm.support.PMR.Product USBkey;
+    public readonly int price;
+    public static com.ibm.support.PMR.Product cheapestProduct();
+    public com.ibm.support.PMR.Article getAffordableArticle(int arg);
+    public static com.ibm.support.PMR.Product getAffordableProduct(int argument);
+    public string toString();
+    public static com.ibm.support.PMR.Product valueOf(string arg);
+    public static com.ibm.support.PMR.Product[] values();
+}
+
+public class SellableArticle
+        implements com.ibm.support.PMR.Article
+{
+    public readonly string name;
+    public int price;
+    public SellableArticle(object arg);
+    public SellableArticle(string arg);
+    public SellableArticle(string arg1, float arg2);
+    public SellableArticle(string arg1, int arg2);
+    public com.ibm.support.PMR.Article getAffordableArticle(int arg);
+}
+
+public class Store
+        extends java.io.Serializable
+{
+    public readonly double computedInteger;
+    public int computedValue;
+    public int legalStockValue;
+    public Store();
+    public void addSale(com.ibm.support.PMR.Product arg);
+    public float testLegalDifference();
+    public string toString();
+}
+
+public class Tax
+        property automaticVariable "true"
+{
+    public static final double computeEuroVAT(java.lang.Double Value);
+    public static final java.lang.Double computeLocalTAX(double paid);
+}
+
+package com.ibm.support.logging;
+
+
+public class Tracer
+{
+    public static void traceRule();
+}
+

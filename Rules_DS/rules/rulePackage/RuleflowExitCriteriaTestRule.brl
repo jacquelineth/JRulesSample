@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>RuleflowExitCriteriaTestRule</name>
+  <uuid>ce43422f-7463-481b-84a5-0ef8a0140763</uuid>
+  <documentation><![CDATA[To delete]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'client' to a customer ; 
+	set 'listing' to a portfolio ; 
+if 
+	 the category of client is a category of listing and it is not true that  client is enlisted in listing 
+then set 'Exit Ruleflow switch' to true ; 
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

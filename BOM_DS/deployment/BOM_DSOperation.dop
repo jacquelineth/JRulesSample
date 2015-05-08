@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="BOM_DSRuleset" targetRuleProjectName="BOM_DS">
+  <name>BOM_DSOperation</name>
+  <uuid>0d179d72-f7c3-4c9a-bff7-a0284a6b9fbf</uuid>
+  <referencedVariables variableName="Store" variableSetName="BOM_DSParameters" direction="OUT">
+    <variableSet href="../rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="myMainportfolio" variableSetName="BOM_DSParameters" direction="IN_OUT">
+    <variableSet href="../rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="mySecondaryportfolio" variableSetName="BOM_DSParameters" direction="IN_OUT">
+    <variableSet href="../rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="counter" variableSetName="BOM_DSParameters">
+    <variableSet href="../rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="Exectime" variableSetName="BOM_DSParameters" direction="OUT">
+    <variableSet href="../rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <referencedVariables variableName="myExtractorParam" variableSetName="BOM_DSParameters">
+    <variableSet href="../rules/BOM_DSParameters.var#73e41d64-9c00-4cbf-ab58-3530b4c17785"/>
+  </referencedVariables>
+  <targetRuleProject href="../../BOM_DS#cc7d6bd7-cdc7-47bc-aa0f-b5e6082c7a6c"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

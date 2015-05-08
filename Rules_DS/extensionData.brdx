@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data:extension-data xmlns:data="http://ilog.rules.brms.extension/data" modelNsURI="http://ilog.rules.brms.extension/default">
+  <enum-data name="Status">
+    <item>new</item>
+    <item>defined</item>
+    <item>validated</item>
+    <item>rejected</item>
+    <item>deployable</item>
+  </enum-data>
+  <enum-data name="Severity">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </enum-data>
+</data:extension-data>

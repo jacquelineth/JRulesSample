@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><project-deployment xmlns="http://www.ibm.com/rules/ruleproject/deployment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <config serverURL="http://localhost:9084/res">
+        <xom>
+            <uri value="resuri://ClassicXOM.zip/2.0"/>
+        </xom>
+    </config>
+	  <config serverURL="http://localhost:9088/res">
+        <xom>
+            <uri value="resuri://ClassicXOM.zip/1.0"/>
+        </xom>
+    </config>
+	  <config serverURL="http://localhost:8080/res85">
+        <xom>
+            <uri value="resuri://ClassicXOM.zip/1.0"/>
+        </xom>
+    </config>	
+<config serverURL="http://localhost:9082/res">
+        <xom>
+            <uri value="resuri://ClassicXOM.zip/1.0"/>
+        </xom>
+    </config>
+<config serverURL="http://localhost:9086/res">
+        <xom>
+            <uri value="resuri://ClassicXOM.zip/3.0"/>
+        </xom>
+    </config>
+</project-deployment>
