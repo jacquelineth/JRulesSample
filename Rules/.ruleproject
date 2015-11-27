@@ -4,8 +4,10 @@
   <uuid>27e880b5-dfa7-457a-a361-74c03b8e9f60</uuid>
   <outputLocation>output</outputLocation>
   <categories>any</categories>
+  <rulesetProperties></rulesetProperties>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
-    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="ClassicXOM" url="platform:/ClassicXOM" kind="JAVA_PROJECT" exported="true"/>
     <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="BOM" url="platform:/BOM" kind="RULE_PROJECT"/>
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="ilog.rules.studio.launching.JRulesProject">
+<stringAttribute key="ilog.rules.studio.launching.EXTRACTOR" value=""/>
+<mapAttribute key="ilog.rules.studio.launching.RULESET_PARAMETERS_FUNCT_SIGN">
+<mapEntry key="counter" value="function short get_counter_value()"/>
+<mapEntry key="myExtractorParam" value="function java.util.Date get_myExtractorParam_value()"/>
+<mapEntry key="myMainportfolio" value="function com.ibm.support.PMR.Portfolio get_myMainportfolio_value()"/>
+<mapEntry key="mySecondaryportfolio" value="function com.ibm.support.PMR.Portfolio get_mySecondaryportfolio_value()"/>
+</mapAttribute>
+<mapAttribute key="ilog.rules.studio.launching.RULESET_PARAMETERS_FUNCT_VALUES">
+<mapEntry key="counter" value="return 10;"/>
+<mapEntry key="myExtractorParam" value="java.util.Date result = new java.util.Date();&#10;return result;"/>
+<mapEntry key="myMainportfolio" value="com.ibm.support.PMR.Portfolio result = new com.ibm.support.PMR.Portfolio();&#10;return result;"/>
+<mapEntry key="mySecondaryportfolio" value="com.ibm.support.PMR.Portfolio result = new com.ibm.support.PMR.Portfolio();&#10;return result;"/>
+</mapAttribute>
+<mapAttribute key="ilog.rules.studio.launching.RULESET_PARAMETERS_NAMES">
+<mapEntry key="counter" value="counter"/>
+<mapEntry key="myExtractorParam" value="myExtractorParam"/>
+<mapEntry key="myMainportfolio" value="myMainportfolio"/>
+<mapEntry key="mySecondaryportfolio" value="mySecondaryportfolio"/>
+</mapAttribute>
+<mapAttribute key="ilog.rules.studio.launching.RULESET_PARAMETERS_SIMPLE_VALUES">
+<mapEntry key="counter" value="10"/>
+<mapEntry key="myExtractorParam" value=""/>
+<mapEntry key="myMainportfolio" value=""/>
+<mapEntry key="mySecondaryportfolio" value=""/>
+</mapAttribute>
+<mapAttribute key="ilog.rules.studio.launching.RULESET_PARAMETERS_TYPES">
+<mapEntry key="counter" value="1"/>
+<mapEntry key="myExtractorParam" value="2"/>
+<mapEntry key="myMainportfolio" value="2"/>
+<mapEntry key="mySecondaryportfolio" value="2"/>
+</mapAttribute>
+<booleanAttribute key="ilog.rules.studio.launching.USE_EXTRACTOR" value="false"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Rules"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value=""/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Rules"/>
+</launchConfiguration>

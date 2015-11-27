@@ -97,7 +97,7 @@ System.out.println("End Task");]]></Actions>
       <Data Name="node_3#name">node_1</Data>
       <Data Name="node_1#name">node_1</Data>
       <Data Name="node_4#label">Init Task</Data>
-      <Data Name="node_3#x">22.016602</Data>
+      <Data Name="node_3#x">19.016602</Data>
       <Data Name="node_1#width">20.000002</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>

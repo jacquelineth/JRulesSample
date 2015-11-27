@@ -12,5 +12,6 @@
 then
 	for each sellable article called 'variable1' , in articles :
 		- set the price of variable1 to 3 
-		- print the name of variable1;]]></definition>
+		- print the name of variable1
+		- print the name of this rule ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
