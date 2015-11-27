@@ -55,6 +55,7 @@ public class Customer
     public com.ibm.support.PMR.Customer.Phone lastAddedPhone;
     public string name;
     public Customer();
+    public string toString();
 }
 
 public class Food
@@ -357,9 +358,9 @@ public class SellableArticle
 public class Store
         extends java.io.Serializable
 {
-    public readonly java.lang.Integer computedInteger;
+    public readonly double computedInteger;
     public int computedValue;
-    public java.lang.Integer legalStockValue;
+    public int legalStockValue;
     public Store();
     public void addSale(com.ibm.support.PMR.Product arg);
     public float testLegalDifference();
@@ -369,7 +370,7 @@ public class Store
 public class Tax
         property automaticVariable "true"
 {
-    public static final java.lang.Double computeEuroVAT(java.lang.Double Value);
+    public static final double computeEuroVAT(java.lang.Double Value);
     public static final java.lang.Double computeLocalTAX(double paid);
 }
 
@@ -378,7 +379,6 @@ package com.ibm.support.logging;
 
 public class Tracer
 {
-    public static void traceRule()
-                property deprecated "true";
+    public static void traceRule();
 }
 

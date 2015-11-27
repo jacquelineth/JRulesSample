@@ -3,6 +3,16 @@
         xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
     <id>88cff440-6138-43ad-9610-5372de9cc2bd</id>
     <class>
+        <businessName>com.ibm.support.PMR.Customer</businessName>
+        <constructor>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            com.ibm.support.PMR.Customer c=new com.ibm.support.PMR.Customer();
+return c ;
+            ]]></body>
+        </constructor>
+    </class>
+    <class>
         <businessName>com.ibm.support.PMR.Food</businessName>
         <executionName>com.ibm.support.PMR.SellableArticle</executionName>
         <import>com.ibm.support.PMR.Article</import>
@@ -538,7 +548,7 @@ context.insert(c);
     </class>
     <class>
         <businessName>com.ibm.support.logging.Tracer</businessName>
-        <executionName>java.lang.Object</executionName>
+        <executionName>com.ibm.support.logging.Tracer</executionName>
         <method>
             <name>traceRule</name>
             <body language="irl"><![CDATA[

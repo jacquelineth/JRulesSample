@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="ilog.rules.studio.launching.JRulesLocalApplication">
+<stringAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_EXTRACTOR" value=""/>
+<stringAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_EXTRACTOR_ARCHIVE" value=""/>
+<stringAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_PROJECT" value=""/>
+<booleanAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_USE_ALL_RULES" value="false"/>
+<booleanAttribute key="ilog.rules.studio.launching.BEFORE_LAUNCHING_USE_EXTRACTOR" value="false"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/ObserverExecution87/src/SimpleDecisionEngineRunner.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.core.source_locator_id" value="ilog.rules.studio.debug.ui.jrulesSourceLocator"/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="SimpleDecisionEngineRunner"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ObserverExecution87"/>
+</launchConfiguration>

@@ -1,5 +1,5 @@
 <b2x:translation xmlns:b2x="http://schemas.ilog.com/JRules/1.3/Translation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ilog.com/JRules/1.3/Translation ilog/rules/schemas/1_3/b2x.xsd">
-    <id>ece577cf-fba4-499d-9fa6-852efaa14119</id>
+    <id>1871cd6e-64a6-4e4e-9a49-194e7dae9b1d</id>
     <lang>ARL</lang>
     <class>
         <businessName>com.ibm.support.PMR.Food</businessName>
@@ -8,539 +8,462 @@
             <name>AliceMutton</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Alice Mutton");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Aniseed_Syrup</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Aniseed Syrup");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>BostonCrabMeat</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Boston Crab Meat");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>CamembertPierrot</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Camembert Pierrot");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>CarnarvonTigers</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Carnarvon Tigers");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Chai</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Chai");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Chang</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Chang");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ChartreuseVerte</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Chartreuse verte");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ChefAntonCajunSeasoning</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Chef Anton's Cajun Seasoning");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ChefAntonGumboMix</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Chef Anton's Gumbo Mix");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Chocolade</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Chocolade");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>CôteDeBlaye</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Côte de Blaye");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>EscargotsDeBourgogne</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Escargots de Bourgogne");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>FiloMix</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Filo Mix");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Flotemysost</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Flotemysost");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Geitost</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Geitost");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GenenShouyu</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Genen Shouyu");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GnocchiDiNonnaAlice</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gnocchi di nonna Alice");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GorgonzolaTelino</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gorgonzola Telino");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GrandmaBoysenberrySpread</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Grandma's Boysenberry Spread");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GravadLax</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gravad lax");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GuaranáFantástica</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Guaraná Fantástica");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Gudbrandsdalsost</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gudbrandsdalsost");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GulaMalacca</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gula Malacca");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GumbärGummibärchen</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gumbär Gummibärchen");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>GustafKnäckebröd</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Gustaf's Knäckebröd");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Ikura</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Ikura");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>InlagdSill</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Inlagd Sill");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>IpohCoffee</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Ipoh Coffee");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>JackNewEnglandClamChowder</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Jack's New England Clam Chowder");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Konbu</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Konbu");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Lakkalikööri</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Lakkalikööri");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>LaughingLumberjackLager</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Laughing Lumberjack Lager");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>LonglifeTofu</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Longlife Tofu");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>LouisianaFieryHotPepperSauce</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Louisiana Fiery Hot Pepper Sauce");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>LouisianaHotSpicedOkra</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Louisiana Hot Spiced Okra");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ManjimupDriedApples</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Manjimup Dried Apples");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>MascarponeFabioli</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Mascarpone Fabioli");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Maxilaku</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Maxilaku");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>MishiKobeNiku</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Mishi Kobe Niku");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>MozzarellaDiGiovanni</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Mozzarella di Giovanni");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>NordOstMatjeshering</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Nord-Ost Matjeshering");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>NorthwoodsCranberrySauce</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Northwoods Cranberry Sauce");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>NuNuCaNußNougatCreme</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("NuNuCa Nuß-Nougat-Crème");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>OriginalFrankfurterGrüneSoße</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Original Frankfurter grüne Soße");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>OutbackLager</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Outback Lager");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Pavlova</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Pavlova");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>PerthPasties</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Perth Pasties");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>PâtéChinois</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Pâté chinois");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>QuesoCabrales</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Queso Cabrales");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>QuesoManchegoLaPastora</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Queso Manchego La Pastora");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>RacletteCourdavault</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Raclette Courdavault");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>RavioliAngelo</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Ravioli Angelo");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>RhönbräuKlosterbier</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Rhönbräu Klosterbier");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>RogedeSild</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Rogede sild");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>RödKaviar</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Röd Kaviar");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>RössleSauerkraut</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Rössle Sauerkraut");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SasquatchAle</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Sasquatch Ale");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SchoggiSchokolade</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Schoggi Schokolade");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ScottishLongbreads</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Scottish Longbreads");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SingaporeanHokkienFriedMee</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Singaporean Hokkien Fried Mee");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SirRodneyMarmalade</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Sir Rodney's Marmalade");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SirRodneyScones</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Sir Rodney's Scones");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SiropDErable</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Sirop d'érable");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Spegesild</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Spegesild");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>SteeleyeStout</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Steeleye Stout");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>TarteAuSucre</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Tarte au sucre");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>TeatimeChocolateBiscuits</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Teatime Chocolate Biscuits");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ThüringerRostbratwurst</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Thüringer Rostbratwurst");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Tofu</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Tofu");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Tourtière</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Tourtière");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>Tunnbröd</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Tunnbröd");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>UncleBobOrganicDriedPears</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Uncle Bob's Organic Dried Pears");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ValkoinenSuklaa</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Valkoinen suklaa");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>VegieSpread</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Vegie-spread");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>WimmersGuteSemmelknödel</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Wimmers gute Semmelknödel");
-
             ]]></getter>
         </attribute>
         <attribute>
             <name>ZaanseKoeken</name>
             <getter language="arl"><![CDATA[
             return new com.ibm.support.PMR.SellableArticle("Zaanse koeken");
-
             ]]></getter>
         </attribute>
     </class>
@@ -552,19 +475,17 @@
             <body language="arl"><![CDATA[
             this.customersList.add(c);
 retract(c);
-
             ]]></body>
         </method>
         <method>
             <name>checkListed</name>
             <parameter type="com.ibm.support.PMR.Customer"/>
             <body language="arl"><![CDATA[
-            com.ibm.support.PMR.Portfolio p = (com.ibm.support.PMR.Portfolio)get("myMainportfolio");
-com.ibm.support.PMR.Store s = (com.ibm.support.PMR.Store)get("Store");
-com.ibm.support.PMR.Portfolio p2 = (com.ibm.support.PMR.Portfolio)get("mySecondaryportfolio");
+            com.ibm.support.PMR.Portfolio p = myMainportfolio;
+com.ibm.support.PMR.Store s = Store;
+com.ibm.support.PMR.Portfolio p2 = mySecondaryportfolio;
 java.lang.System.err.print(((("\n\t Called virtual methods" + p) + p2) + "\n") + s);
 return p.customersList.contains(customer) || p2.customersList.contains(customer);
-
             ]]></body>
         </method>
         <method>
@@ -573,7 +494,6 @@ return p.customersList.contains(customer) || p2.customersList.contains(customer)
             <body language="arl"><![CDATA[
             this.customersList.remove(c);
 insert(c);
-
             ]]></body>
         </method>
     </class>
@@ -582,15 +502,13 @@ insert(c);
         <attribute>
             <name>computedInteger</name>
             <getter language="arl"><![CDATA[
-            return new java.lang.Integer(this.computedValue).intValue();
-
+            return new java.lang.Double(this.computedValue);
             ]]></getter>
         </attribute>
         <method>
             <name>testLegalDifference</name>
             <body language="arl"><![CDATA[
-            return this.legalStockValue - this.computedValue;
-
+            return this.legalStockValue.intValue() - this.computedValue;
             ]]></body>
         </method>
     </class>
@@ -601,8 +519,7 @@ insert(c);
             <name>computeEuroVAT</name>
             <parameter type="java.lang.Double"/>
             <body language="arl"><![CDATA[
-            return Value.doubleValue() * 1.18;
-
+            return java.lang.Double.valueOf(Value.doubleValue() * 1.18);
             ]]></body>
         </method>
         <method>
@@ -610,12 +527,7 @@ insert(c);
             <parameter type="double"/>
             <body language="arl"><![CDATA[
             return java.lang.Double.valueOf(paid * 1.1);
-
             ]]></body>
         </method>
-    </class>
-    <class>
-        <businessName>com.ibm.support.logging.Tracer</businessName>
-        <executionName>com.ibm.support.logging.Tracer</executionName>
     </class>
 </b2x:translation>
