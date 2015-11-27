@@ -15,9 +15,9 @@ public class Store implements Serializable{
 		for (com.ibm.support.PMR.Product p:Product.values()){
 			account.put(p, new Integer(0));
 		}
-		legalStockValue =new Integer(0);
+		//legalStockValue =new Integer(0);
 	}
-	public Integer legalStockValue; 
+	public int legalStockValue; 
 	public void addSale(Product p){
 		computedValue+=p.getPrice();
 		account.put(p,account.get(p)+1);

@@ -26,6 +26,13 @@ public Category category;
 	public Phone(){content=new String();}
 	public String content;
 	   public boolean isUntrusted(){return content.isEmpty();}
+         	public boolean equals(Object o) {
+		   if(o.getClass().equals(this.getClass())){
+			   Phone p = (Phone) o;
+			  return  p.content.equals(content);
+		   }
+		return super.equals(o);
+	}
    }
    
    public java.util.ArrayList<CreditCard>  allCCs;
@@ -34,12 +41,20 @@ public Category category;
 	//public String bank;
 	   public String CCnumber;
 	   //public java.util.Date expirationDate;
+         	   @Override
+	public boolean equals(Object o) {
+		   if(o.getClass().equals(this.getClass())){
+			   CreditCard cd = (CreditCard) o;
+			   return cd.CCnumber.equals(CCnumber);
+		   }
+		return super.equals(o);
+	}
    }
    
  
    @Override
 public String toString() {
 	// TODO Auto-generated method stub
-	return "{"+this.getClass().getName()+"{ name:"+name+", Category:"+this.category.toString()+", Purchases:"+CumulatedPurchase +" }" ;
+	return this.getClass().getName()+"{ name:"+name+", Category:"+this.category.toString()+", Purchases:"+CumulatedPurchase +" }" ;
 }
 }
