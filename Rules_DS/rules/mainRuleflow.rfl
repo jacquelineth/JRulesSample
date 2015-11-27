@@ -42,7 +42,6 @@ for (int j=0; j<CategorySize;j++){
         <FinalActions Language="bal"><![CDATA[print "out of Sales' task" ;]]></FinalActions>
         <RuleList>
           <Rule Uuid="ab4c0ccb-6c79-4ebd-ba5c-b7ae0a7eb097"/>
-          <Package Name="level1.level2"/>
           <Rule Uuid="4cdcaebf-6629-4b5b-9337-dcd670d11967"/>
           <Rule Uuid="d266f2e7-55f4-4b8a-8d6c-7bdda16d3759"/>
         </RuleList>
@@ -86,18 +85,18 @@ System.out.println("End Task");]]></Actions>
   <Resources>
     <ResourceSet Locale="en_US">
       <Data Name="node_3#height">40.0</Data>
-      <Data Name="node_0#height">21.0</Data>
       <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_4#x">54.68327</Data>
-      <Data Name="node_4#y">97.70117</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">52.016582</Data>
       <Data Name="node_4#name">node_3</Data>
-      <Data Name="node_2#label">rules execution</Data>
+      <Data Name="node_4#y">97.70117</Data>
+      <Data Name="node_3#y">194.40234</Data>
       <Data Name="node_3#width">102.0</Data>
-      <Data Name="node_3#y">219.40234</Data>
+      <Data Name="node_2#label">rules execution</Data>
       <Data Name="node_3#name">node_1</Data>
       <Data Name="node_1#name">node_1</Data>
       <Data Name="node_4#label">Init Task</Data>
-      <Data Name="node_3#x">19.016602</Data>
+      <Data Name="node_3#x">52.0166</Data>
       <Data Name="node_1#width">20.000002</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_0#name">node_0</Data>
@@ -108,17 +107,17 @@ System.out.println("End Task");]]></Actions>
       <Data Name="node_5#width">102.0</Data>
       <Data Name="node_5#label">Taxes</Data>
       <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_0#x">52.0166</Data>
       <Data Name="node_3#label">Sales</Data>
+      <Data Name="node_0#x">52.0166</Data>
       <Data Name="node_4#height">53.402344</Data>
+      <Data Name="node_1#x">62.5166</Data>
       <Data Name="node_4#width">104.0332</Data>
-      <Data Name="node_1#x">-23.483398</Data>
-      <Data Name="node_1#y">485.8047</Data>
+      <Data Name="node_1#y">477.8047</Data>
       <Data Name="node_1#height">20.0</Data>
-      <Data Name="node_2#x">63.693954</Data>
-      <Data Name="node_2#y">310.77017</Data>
-      <Data Name="node_5#y">436.47134</Data>
-      <Data Name="node_5#x">228.85</Data>
+      <Data Name="node_2#x">91.69383</Data>
+      <Data Name="node_2#y">291.10352</Data>
+      <Data Name="node_5#y">387.8047</Data>
+      <Data Name="node_5#x">121.51663</Data>
     </ResourceSet>
   </Resources>
   <Properties>

@@ -4,7 +4,7 @@
 <stringAttribute key="ilog.rules.studio.dvs.DVS_CONFIGURATION_FILE_NAME" value="IBM WebSphere AS 8.5 9088"/>
 <stringAttribute key="ilog.rules.studio.dvs.DVS_PROJECT_NAME" value="DVS Project"/>
 <stringAttribute key="ilog.rules.studio.dvs.EXTRACTOR" value=""/>
-<booleanAttribute key="ilog.rules.studio.dvs.LOCAL_EXECUTION" value="false"/>
+<booleanAttribute key="ilog.rules.studio.dvs.LOCAL_EXECUTION" value="true"/>
 <stringAttribute key="ilog.rules.studio.dvs.RULE_PROJECT" value="Rules"/>
 <stringAttribute key="ilog.rules.studio.dvs.SERVER_URL" value="http://localhost:9082/res"/>
 <booleanAttribute key="ilog.rules.studio.dvs.USE_DEPLOYED_XOM" value="true"/>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+  <name value="IBM WebSphere AS 8.0  ODM801 9086">  </name>
+  <url value="http://localhost:9086/testing">  </url>
+  <uuid value="_mVH18AF-EeS33o_ojyhF3g">  </uuid>
+  <type>IBM WebSphere AS 8.0</type>
+  <ssp-path>C:/IBM/ODM801/executionserver/applicationservers/WebSphere8/jrules-ssp-WAS8.ear</ssp-path>
+  <rts-path>C:/IBM/ODM801/teamserver/applicationservers/WebSphere8/jrules-teamserver-WAS8.ear</rts-path>
+</server>

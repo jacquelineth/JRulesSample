@@ -8,6 +8,8 @@
   <configurations>
     <configuration name="IBM&#32;WebSphere&#32;AS&#32;8.5"/>
     <configuration name="IBM&#32;WebSphere&#32;AS&#32;8.5&#32;9088"/>
+    <configuration name="IBM&#32;WebSphere&#32;AS&#32;8.0&#32;&#32;ODM801&#32;9086"/>
+    <configuration name="IBM&#32;WebSphere&#32;AS&#32;8.0&#32;ODM8012"/>
   </configurations>
   <formats>
   </formats>
