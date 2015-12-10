@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
-  <name>mainRuleflow</name>
-  <uuid>763133ee-d51c-4943-a6fb-1f0f2835d897</uuid>
+  <name>SecondaryRuleflow</name>
+  <uuid>e8b5a27a-7483-4c25-9579-791846053207</uuid>
   <locale>en_US</locale>
   <categories>any</categories>
   <rfModel>

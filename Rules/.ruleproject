@@ -15,6 +15,7 @@
       <ruleProject href="BOM#bf78e194-0141-4198-b202-1c11010a4e9e"/>
     </entries>
   </paths>
+  <parameters name="ruleflowSelector" type="java.lang.String" initialValue="&quot;Secondary&quot;" verbalization="selector"/>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
   </modelFolders>
