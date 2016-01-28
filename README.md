@@ -4,6 +4,7 @@
 Basic **JRules** Samples, each branch contains the same sample modified to illustrate a feature or a version.
 This BRMS is now called ODM (Operational Decision Manager).
 
+
 - Based on Rule Designer.
 - Basic rules (2 rules , 1 Decision Table, 1 ruleflow)
   - initial flow  task populates working memory
